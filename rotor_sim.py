@@ -61,27 +61,44 @@ shaft_elements = [
 
 shaft_elements.insert(1, laby_conical_shaft)
 
-rotor_shaft = rs.Rotor(shaft_elements=shaft_elements);
+simple_shaft = rs.Rotor(shaft_elements=shaft_elements);
 
 insert_nodes = [
-
+    0.00381125, # turbine
+    0.00635125, # rotor sleeve start
+    0.01656586 + 0.01/2, # kero bearing 1
+    0.01656586 + 0.01 * 3/2, # kero bearing 2
 ]
 
-rotor_model = rotor_shaft.add_nodes(insert_nodes)
+full_shaft = simple_shaft.add_nodes(insert_nodes)
 
 # SI units btw
-turbine = rs.DiskElement(n=0, m=0.292578, Ip = 3.68819E-4, Id=1.85449E-4, tag="Turbine");
+turbine = rs.DiskElement(
+    n=1,
+    m=0.292578,
+    Ip = 3.68819E-4,
+    Id=1.85449E-4,
+    tag="Turbine"
+    );
 
+#TODO: find out how positive and negative angle affect simulation
 bearing_alpha = np.deg2rad(-15);
-
+# bearings are modeled using their centers, not where they start
 kero_bearing1 = rs.BallBearingElement(
-    n=1, n_balls=12, d_balls=5.556E-3,
+    n=3, n_balls=12, d_balls=5.556E-3,
+    fs=0, alpha=bearing_alpha)
+
+kero_bearing2 = rs.BallBearingElement(
+    n=4, n_balls=12, d_balls=5.556E-3,
     fs=0, alpha=bearing_alpha)
 
 disk_elements = [turbine];
-bearing_elements = [kero_bearing1];
-
-rotor_model.disk_elements = disk_elements
-rotor_model.bearing_elements = bearing_elements
+bearing_elements = [kero_bearing1, kero_bearing2];
+rotor_model = rs.Rotor(
+    shaft_elements=full_shaft.shaft_elements,
+    disk_elements=disk_elements,
+    bearing_elements=bearing_elements
+    )
 
 rotor_model.plot_rotor()
+#print(rs.__version__)
