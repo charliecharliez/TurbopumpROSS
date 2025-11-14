@@ -3,7 +3,7 @@ import numpy as np
 
 # import plotly just to guarantee that plots will appear in the docs
 import plotly
-
+print(rs.__version__)
 from pathlib import Path
 
 import plotly.graph_objects as go
@@ -13,7 +13,7 @@ pio.renderers.default = "browser"# "vscode"
 
 rotor = rs.Rotor.load("MODEL.json")
 rotor_fig = rotor.plot_rotor()
-rotor_fig.show()
+#rotor_fig.show()
 
 rotor_fig.update_yaxes(scaleanchor="x", scaleratio=1)
 rotor_fig.update_xaxes(constrain="domain")
@@ -26,8 +26,11 @@ def ToAngularFreq(rpm: float) -> float:
 
 speed_range = np.linspace(0, ToAngularFreq(RPM_GRAPH_MAX), 40)
 
-modal = rotor.run_modal(ToAngularFreq(RPM_GRAPH_MAX), num_modes=6)
-modal.plot_mode_3d(2).show()
+modal = rotor.run_modal(ToAngularFreq(RPM_OP), num_modes=12)
+for mode, shape in enumerate(modal.shapes):
+    modal.plot_mode_3d(mode, frequency_units="RPM").show();
+for mode, shape in enumerate(modal.shapes):
+    modal.plot_mode_2d(mode, frequency_units="RPM").show();
 
 campbell = rotor.run_campbell(
     speed_range=speed_range,
