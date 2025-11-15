@@ -281,13 +281,13 @@ kero_bearing2 = rs.BallBearingElement(
 Mark(kero_bearing2, 1.24275043),
 
 lox_bearing1 = rs.BallBearingElement(
-    n=0, n_balls=5, d_balls=5.556E-3,
+    n=0, n_balls=10, d_balls=5.556E-3,
     fs=l_preload, alpha=bearing_alpha, tag="LOXBearing1"
 )
 Mark(lox_bearing1, 5.13965039);
 
 lox_bearing2 = rs.BallBearingElement(
-    n=0, n_balls=5, d_balls=5.556E-3,
+    n=0, n_balls=10, d_balls=5.556E-3,
     fs=l_preload, alpha=bearing_alpha, tag="LOXBearing2"
 )
 Mark(lox_bearing2, 5.53335118);

@@ -34,7 +34,9 @@ for mode, shape in enumerate(modal.shapes):
 
 campbell = rotor.run_campbell(
     speed_range=speed_range,
-    frequencies=6
+    frequencies=6,
+    torsional_analysis=False,
+    frequency_type="wd"
 )
 campbell_fig = campbell.plot()
 campbell_fig.show()
