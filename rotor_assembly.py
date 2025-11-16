@@ -294,7 +294,7 @@ Mark(lox_bearing2, 5.53335118);
 
 bearing_elements = [
     kero_bearing1,
-    kero_bearing2,
+    #kero_bearing2,
     lox_bearing1,
     lox_bearing2
 ]

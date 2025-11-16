@@ -14,9 +14,6 @@ d_balls = 0.005
 alpha = 15 * np.pi / 180
 fs = 1000
 tag = "ballbearing"
-bearing = rs.BallBearingElement(n=n, n_balls=n_balls, d_balls=d_balls,
-                             fs=fs, alpha=alpha, tag=tag)
-#print(bearing.K(0))
-#print(bearing.K(50000 / 60))
-print(rotor.bearing_elements[0].K(0))
-print(rotor.bearing_elements[0].K(5000))
+
+for i, v in enumerate(rotor.bearing_elements):
+    print(v.tag, v.K(0))

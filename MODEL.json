@@ -1169,31 +1169,6 @@ n_balls = 12
 scale_factor = 1
 tag = "KeroBearing1"
 
-[BallBearingElement_KeroBearing2]
-alpha = 0.2617993877991494
-color = "#355d7a"
-cxx = [ 422.97485075695016,]
-cxy = [ 0.0,]
-cyx = [ 0.0,]
-cyy = [ 660.8982043077345,]
-czz = [ 0,]
-d_balls = 0.005556
-fs = 100
-kxx = [ 33837988.06055601,]
-kxy = [ 0.0,]
-kyx = [ 0.0,]
-kyy = [ 52871856.34461876,]
-kzz = [ 0,]
-mxx = [ 0,]
-mxy = [ 0,]
-myx = [ 0,]
-myy = [ 0,]
-mzz = [ 0,]
-n = 19
-n_balls = 12
-scale_factor = 1
-tag = "KeroBearing2"
-
 [BallBearingElement_LOXBearing1]
 alpha = 0.2617993877991494
 color = "#355d7a"
