@@ -579,7 +579,7 @@ alpha = 0.0
 beta = 0.0
 
 ["ShaftElement_Shaft Element 34"]
-L = 0.005232908
+L = 0.007264908
 idl = 0.0
 odl = 0.015214599999999998
 idr = 0.0
@@ -596,7 +596,7 @@ alpha = 0.0
 beta = 0.0
 
 ["ShaftElement_Shaft Element 35"]
-L = 0.005232908
+L = 0.007264908
 idl = 0.0
 odl = 0.0157734
 idr = 0.0
@@ -613,7 +613,7 @@ alpha = 0.0
 beta = 0.0
 
 ["ShaftElement_Shaft Element 36"]
-L = 0.005232908
+L = 0.007264908
 idl = 0.0
 odl = 0.016332199999999998
 idr = 0.0
@@ -630,7 +630,7 @@ alpha = 0.0
 beta = 0.0
 
 ["ShaftElement_Shaft Element 37"]
-L = 0.005232908
+L = 0.007264908
 idl = 0.0
 odl = 0.016890999999999996
 idr = 0.0
@@ -647,7 +647,7 @@ alpha = 0.0
 beta = 0.0
 
 ["ShaftElement_Shaft Element 38"]
-L = 0.005232908
+L = 0.007264908
 idl = 0.0
 odl = 0.017449799999999998
 idr = 0.0
@@ -664,7 +664,7 @@ alpha = 0.0
 beta = 0.0
 
 ["ShaftElement_Shaft Element 39"]
-L = 0.0052514599059999825
+L = 0.005251459905999969
 idl = 0.0
 odl = 0.011999976
 idr = 0.0
@@ -681,7 +681,7 @@ alpha = 0.0
 beta = 0.0
 
 ["ShaftElement_Shaft Element 40"]
-L = 0.0017208400940000174
+L = 0.0017208400940000312
 idl = 0.0
 odl = 0.011999976
 idr = 0.0
@@ -749,7 +749,7 @@ alpha = 0.0
 beta = 0.0
 
 ["ShaftElement_Shaft Element 44"]
-L = 0.002499460000003186
+L = 0.002499460000003214
 idl = 0.0
 odl = 0.011999976
 idr = 0.0
@@ -766,7 +766,7 @@ alpha = 0.0
 beta = 0.0
 
 ["ShaftElement_Shaft Element 45"]
-L = 0.004472839999996814
+L = 0.004472839999996786
 idl = 0.0
 odl = 0.011999976
 idr = 0.0
@@ -851,7 +851,7 @@ alpha = 0.0
 beta = 0.0
 
 ["ShaftElement_Shaft Element 50"]
-L = 0.003281590000002209
+L = 0.003281590000002237
 idl = 0.0
 odl = 0.00635
 idr = 0.0
@@ -868,7 +868,7 @@ alpha = 0.0
 beta = 0.0
 
 ["ShaftElement_Shaft Element 51"]
-L = 0.0027877399999977903
+L = 0.0027877399999977626
 idl = 0.0
 odl = 0.00635
 idr = 0.0
@@ -1019,17 +1019,17 @@ color = "Firebrick"
 [BallBearingElement_KeroBearing1]
 alpha = 0.2617993877991494
 color = "#355d7a"
-cxx = [ 196.32753441724915,]
+cxx = [ 661.8988584036796,]
 cxy = [ 0.0,]
 cyx = [ 0.0,]
-cyy = [ 306.7617725269518,]
+cyy = [ 1034.2169662557492,]
 czz = [ 0,]
 d_balls = 0.005556
-fs = 10
-kxx = [ 15706202.753379932,]
+fs = 383.2050807568878
+kxx = [ 52951908.67229436,]
 kxy = [ 0.0,]
 kyx = [ 0.0,]
-kyy = [ 24540941.802156143,]
+kyy = [ 82737357.30045994,]
 kzz = [ 0,]
 mxx = [ 0,]
 mxy = [ 0,]
@@ -1044,17 +1044,17 @@ tag = "KeroBearing1"
 [BallBearingElement_LOXBearing1]
 alpha = 0.2617993877991494
 color = "#355d7a"
-cxx = [ 152.46497791329384,]
+cxx = [ 514.0205887416523,]
 cxy = [ 0.0,]
 cyx = [ 0.0,]
-cyy = [ 271.65252189451013,]
+cyy = [ 915.8496013214294,]
 czz = [ 0,]
 d_balls = 0.005556
-fs = 10
-kxx = [ 12197198.233063506,]
+fs = 383.2050807568878
+kxx = [ 41121647.09933218,]
 kxy = [ 0.0,]
 kyx = [ 0.0,]
-kyy = [ 21732201.75156081,]
+kyy = [ 73267968.10571435,]
 kzz = [ 0,]
 mxx = [ 0,]
 mxy = [ 0,]
@@ -1069,17 +1069,17 @@ tag = "LOXBearing1"
 [BallBearingElement_LOXBearing2]
 alpha = 0.2617993877991494
 color = "#355d7a"
-cxx = [ 152.46497791329384,]
+cxx = [ 514.0205887416523,]
 cxy = [ 0.0,]
 cyx = [ 0.0,]
-cyy = [ 271.65252189451013,]
+cyy = [ 915.8496013214294,]
 czz = [ 0,]
 d_balls = 0.005556
-fs = 10
-kxx = [ 12197198.233063506,]
+fs = 383.2050807568878
+kxx = [ 41121647.09933218,]
 kxy = [ 0.0,]
 kyx = [ 0.0,]
-kyy = [ 21732201.75156081,]
+kyy = [ 73267968.10571435,]
 kzz = [ 0,]
 mxx = [ 0,]
 mxy = [ 0,]
@@ -1094,384 +1094,384 @@ tag = "LOXBearing2"
 ["ShaftElement_Shaft Element 0".material]
 name = "Stainless-A286"
 rho = 7944.1327
-E = 199900000000.0
-G_s = 76297709923.66412
+E = 198569010043.24887
+G_s = 75789698489.78964
 color = "#525252"
 
 ["ShaftElement_Shaft Element 1".material]
 name = "Stainless-A286"
 rho = 7944.1327
-E = 199900000000.0
-G_s = 76297709923.66412
+E = 198569010043.24887
+G_s = 75789698489.78964
 color = "#525252"
 
 ["ShaftElement_Shaft Element 2".material]
 name = "Stainless-A286"
 rho = 7944.1327
-E = 199900000000.0
-G_s = 76297709923.66412
+E = 198569010043.24887
+G_s = 75789698489.78964
 color = "#525252"
 
 ["ShaftElement_Shaft Element 3".material]
 name = "Stainless-A286"
 rho = 7944.1327
-E = 199900000000.0
-G_s = 76297709923.66412
+E = 198569010043.24887
+G_s = 75789698489.78964
 color = "#525252"
 
 ["ShaftElement_Shaft Element 4".material]
 name = "Stainless-A286"
 rho = 7944.1327
-E = 199900000000.0
-G_s = 76297709923.66412
+E = 198569010043.24887
+G_s = 75789698489.78964
 color = "#525252"
 
 ["ShaftElement_Shaft Element 5".material]
 name = "Stainless-A286"
 rho = 7944.1327
-E = 199900000000.0
-G_s = 76297709923.66412
+E = 198569010043.24887
+G_s = 75789698489.78964
 color = "#525252"
 
 ["ShaftElement_Shaft Element 6".material]
 name = "Stainless-A286"
 rho = 7944.1327
-E = 199900000000.0
-G_s = 76297709923.66412
+E = 198569010043.24887
+G_s = 75789698489.78964
 color = "#525252"
 
 ["ShaftElement_Shaft Element 7".material]
 name = "Stainless-A286"
 rho = 7944.1327
-E = 199900000000.0
-G_s = 76297709923.66412
+E = 198569010043.24887
+G_s = 75789698489.78964
 color = "#525252"
 
 ["ShaftElement_Shaft Element 8".material]
 name = "Stainless-A286"
 rho = 7944.1327
-E = 199900000000.0
-G_s = 76297709923.66412
+E = 198569010043.24887
+G_s = 75789698489.78964
 color = "#525252"
 
 ["ShaftElement_Shaft Element 9".material]
 name = "Stainless-A286"
 rho = 7944.1327
-E = 199900000000.0
-G_s = 76297709923.66412
+E = 198569010043.24887
+G_s = 75789698489.78964
 color = "#525252"
 
 ["ShaftElement_Shaft Element 10".material]
 name = "Stainless-A286"
 rho = 7944.1327
-E = 199900000000.0
-G_s = 76297709923.66412
+E = 198569010043.24887
+G_s = 75789698489.78964
 color = "#525252"
 
 ["ShaftElement_Shaft Element 11".material]
 name = "Stainless-A286"
 rho = 7944.1327
-E = 199900000000.0
-G_s = 76297709923.66412
+E = 198569010043.24887
+G_s = 75789698489.78964
 color = "#525252"
 
 ["ShaftElement_Shaft Element 12".material]
 name = "Stainless-A286"
 rho = 7944.1327
-E = 199900000000.0
-G_s = 76297709923.66412
+E = 198569010043.24887
+G_s = 75789698489.78964
 color = "#525252"
 
 ["ShaftElement_Shaft Element 13".material]
 name = "Stainless-A286"
 rho = 7944.1327
-E = 199900000000.0
-G_s = 76297709923.66412
+E = 198569010043.24887
+G_s = 75789698489.78964
 color = "#525252"
 
 ["ShaftElement_Shaft Element 14".material]
 name = "Stainless-A286"
 rho = 7944.1327
-E = 199900000000.0
-G_s = 76297709923.66412
+E = 198569010043.24887
+G_s = 75789698489.78964
 color = "#525252"
 
 ["ShaftElement_Shaft Element 15".material]
 name = "Stainless-A286"
 rho = 7944.1327
-E = 199900000000.0
-G_s = 76297709923.66412
+E = 198569010043.24887
+G_s = 75789698489.78964
 color = "#525252"
 
 ["ShaftElement_Shaft Element 16".material]
 name = "Stainless-A286"
 rho = 7944.1327
-E = 199900000000.0
-G_s = 76297709923.66412
+E = 198569010043.24887
+G_s = 75789698489.78964
 color = "#525252"
 
 ["ShaftElement_Shaft Element 17".material]
 name = "Stainless-A286"
 rho = 7944.1327
-E = 199900000000.0
-G_s = 76297709923.66412
+E = 198569010043.24887
+G_s = 75789698489.78964
 color = "#525252"
 
 ["ShaftElement_Shaft Element 18".material]
 name = "Stainless-A286"
 rho = 7944.1327
-E = 199900000000.0
-G_s = 76297709923.66412
+E = 198569010043.24887
+G_s = 75789698489.78964
 color = "#525252"
 
 ["ShaftElement_Shaft Element 19".material]
 name = "Stainless-A286"
 rho = 7944.1327
-E = 199900000000.0
-G_s = 76297709923.66412
+E = 198569010043.24887
+G_s = 75789698489.78964
 color = "#525252"
 
 ["ShaftElement_Shaft Element 20".material]
 name = "Stainless-A286"
 rho = 7944.1327
-E = 199900000000.0
-G_s = 76297709923.66412
+E = 198569010043.24887
+G_s = 75789698489.78964
 color = "#525252"
 
 ["ShaftElement_Shaft Element 21".material]
 name = "Stainless-A286"
 rho = 7944.1327
-E = 199900000000.0
-G_s = 76297709923.66412
+E = 198569010043.24887
+G_s = 75789698489.78964
 color = "#525252"
 
 ["ShaftElement_Shaft Element 22".material]
 name = "Stainless-A286"
 rho = 7944.1327
-E = 199900000000.0
-G_s = 76297709923.66412
+E = 198569010043.24887
+G_s = 75789698489.78964
 color = "#525252"
 
 ["ShaftElement_Shaft Element 23".material]
 name = "Stainless-A286"
 rho = 7944.1327
-E = 199900000000.0
-G_s = 76297709923.66412
+E = 198569010043.24887
+G_s = 75789698489.78964
 color = "#525252"
 
 ["ShaftElement_Shaft Element 24".material]
 name = "Stainless-A286"
 rho = 7944.1327
-E = 199900000000.0
-G_s = 76297709923.66412
+E = 198569010043.24887
+G_s = 75789698489.78964
 color = "#525252"
 
 ["ShaftElement_Shaft Element 25".material]
 name = "Stainless-A286"
 rho = 7944.1327
-E = 199900000000.0
-G_s = 76297709923.66412
+E = 198569010043.24887
+G_s = 75789698489.78964
 color = "#525252"
 
 ["ShaftElement_Shaft Element 26".material]
 name = "Stainless-A286"
 rho = 7944.1327
-E = 199900000000.0
-G_s = 76297709923.66412
+E = 198569010043.24887
+G_s = 75789698489.78964
 color = "#525252"
 
 ["ShaftElement_Shaft Element 27".material]
 name = "Stainless-A286"
 rho = 7944.1327
-E = 199900000000.0
-G_s = 76297709923.66412
+E = 198569010043.24887
+G_s = 75789698489.78964
 color = "#525252"
 
 ["ShaftElement_Shaft Element 28".material]
 name = "Stainless-A286"
 rho = 7944.1327
-E = 199900000000.0
-G_s = 76297709923.66412
+E = 198569010043.24887
+G_s = 75789698489.78964
 color = "#525252"
 
 ["ShaftElement_Shaft Element 29".material]
 name = "Stainless-A286"
 rho = 7944.1327
-E = 199900000000.0
-G_s = 76297709923.66412
+E = 198569010043.24887
+G_s = 75789698489.78964
 color = "#525252"
 
 ["ShaftElement_Shaft Element 30".material]
 name = "Stainless-A286"
 rho = 7944.1327
-E = 199900000000.0
-G_s = 76297709923.66412
+E = 198569010043.24887
+G_s = 75789698489.78964
 color = "#525252"
 
 ["ShaftElement_Shaft Element 31".material]
 name = "Stainless-A286"
 rho = 7944.1327
-E = 199900000000.0
-G_s = 76297709923.66412
+E = 198569010043.24887
+G_s = 75789698489.78964
 color = "#525252"
 
 ["ShaftElement_Shaft Element 32".material]
 name = "Stainless-A286"
 rho = 7944.1327
-E = 199900000000.0
-G_s = 76297709923.66412
+E = 198569010043.24887
+G_s = 75789698489.78964
 color = "#525252"
 
 ["ShaftElement_Shaft Element 33".material]
 name = "Stainless-A286"
 rho = 7944.1327
-E = 199900000000.0
-G_s = 76297709923.66412
+E = 198569010043.24887
+G_s = 75789698489.78964
 color = "#525252"
 
 ["ShaftElement_Shaft Element 34".material]
 name = "Stainless-A286"
 rho = 7944.1327
-E = 199900000000.0
-G_s = 76297709923.66412
+E = 198569010043.24887
+G_s = 75789698489.78964
 color = "#525252"
 
 ["ShaftElement_Shaft Element 35".material]
 name = "Stainless-A286"
 rho = 7944.1327
-E = 199900000000.0
-G_s = 76297709923.66412
+E = 198569010043.24887
+G_s = 75789698489.78964
 color = "#525252"
 
 ["ShaftElement_Shaft Element 36".material]
 name = "Stainless-A286"
 rho = 7944.1327
-E = 199900000000.0
-G_s = 76297709923.66412
+E = 198569010043.24887
+G_s = 75789698489.78964
 color = "#525252"
 
 ["ShaftElement_Shaft Element 37".material]
 name = "Stainless-A286"
 rho = 7944.1327
-E = 199900000000.0
-G_s = 76297709923.66412
+E = 198569010043.24887
+G_s = 75789698489.78964
 color = "#525252"
 
 ["ShaftElement_Shaft Element 38".material]
 name = "Stainless-A286"
 rho = 7944.1327
-E = 199900000000.0
-G_s = 76297709923.66412
+E = 198569010043.24887
+G_s = 75789698489.78964
 color = "#525252"
 
 ["ShaftElement_Shaft Element 39".material]
 name = "Stainless-A286"
 rho = 7944.1327
-E = 199900000000.0
-G_s = 76297709923.66412
+E = 198569010043.24887
+G_s = 75789698489.78964
 color = "#525252"
 
 ["ShaftElement_Shaft Element 40".material]
 name = "Stainless-A286"
 rho = 7944.1327
-E = 199900000000.0
-G_s = 76297709923.66412
+E = 198569010043.24887
+G_s = 75789698489.78964
 color = "#525252"
 
 ["ShaftElement_Shaft Element 41".material]
 name = "Stainless-A286"
 rho = 7944.1327
-E = 199900000000.0
-G_s = 76297709923.66412
+E = 198569010043.24887
+G_s = 75789698489.78964
 color = "#525252"
 
 ["ShaftElement_Shaft Element 42".material]
 name = "Stainless-A286"
 rho = 7944.1327
-E = 199900000000.0
-G_s = 76297709923.66412
+E = 198569010043.24887
+G_s = 75789698489.78964
 color = "#525252"
 
 ["ShaftElement_Shaft Element 43".material]
 name = "Stainless-A286"
 rho = 7944.1327
-E = 199900000000.0
-G_s = 76297709923.66412
+E = 198569010043.24887
+G_s = 75789698489.78964
 color = "#525252"
 
 ["ShaftElement_Shaft Element 44".material]
 name = "Stainless-A286"
 rho = 7944.1327
-E = 199900000000.0
-G_s = 76297709923.66412
+E = 198569010043.24887
+G_s = 75789698489.78964
 color = "#525252"
 
 ["ShaftElement_Shaft Element 45".material]
 name = "Stainless-A286"
 rho = 7944.1327
-E = 199900000000.0
-G_s = 76297709923.66412
+E = 198569010043.24887
+G_s = 75789698489.78964
 color = "#525252"
 
 ["ShaftElement_Shaft Element 46".material]
 name = "Stainless-A286"
 rho = 7944.1327
-E = 199900000000.0
-G_s = 76297709923.66412
+E = 198569010043.24887
+G_s = 75789698489.78964
 color = "#525252"
 
 ["ShaftElement_Shaft Element 47".material]
 name = "Stainless-A286"
 rho = 7944.1327
-E = 199900000000.0
-G_s = 76297709923.66412
+E = 198569010043.24887
+G_s = 75789698489.78964
 color = "#525252"
 
 ["ShaftElement_Shaft Element 48".material]
 name = "Stainless-A286"
 rho = 7944.1327
-E = 199900000000.0
-G_s = 76297709923.66412
+E = 198569010043.24887
+G_s = 75789698489.78964
 color = "#525252"
 
 ["ShaftElement_Shaft Element 49".material]
 name = "Stainless-A286"
 rho = 7944.1327
-E = 199900000000.0
-G_s = 76297709923.66412
+E = 198569010043.24887
+G_s = 75789698489.78964
 color = "#525252"
 
 ["ShaftElement_Shaft Element 50".material]
 name = "Stainless-A286"
 rho = 7944.1327
-E = 199900000000.0
-G_s = 76297709923.66412
+E = 198569010043.24887
+G_s = 75789698489.78964
 color = "#525252"
 
 ["ShaftElement_Shaft Element 51".material]
 name = "Stainless-A286"
 rho = 7944.1327
-E = 199900000000.0
-G_s = 76297709923.66412
+E = 198569010043.24887
+G_s = 75789698489.78964
 color = "#525252"
 
 ["ShaftElement_Shaft Element 52".material]
 name = "Stainless-A286"
 rho = 7944.1327
-E = 199900000000.0
-G_s = 76297709923.66412
+E = 198569010043.24887
+G_s = 75789698489.78964
 color = "#525252"
 
 ["ShaftElement_Shaft Element 53".material]
 name = "Stainless-A286"
 rho = 7944.1327
-E = 199900000000.0
-G_s = 76297709923.66412
+E = 198569010043.24887
+G_s = 75789698489.78964
 color = "#525252"
 
 ["ShaftElement_Shaft Element 54".material]
 name = "Stainless-A286"
 rho = 7944.1327
-E = 199900000000.0
-G_s = 76297709923.66412
+E = 198569010043.24887
+G_s = 75789698489.78964
 color = "#525252"

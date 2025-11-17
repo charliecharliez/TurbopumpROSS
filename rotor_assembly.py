@@ -23,7 +23,6 @@ def safe_int(x: float, tol: float = 1e-9) -> int:
 # https://www.specialmetals.com/documents/technical-bulletins/inconel/inconel-alloy-718.pdf
 
 inco_718 = rs.Material(name="Inconel-718", rho=8193, E = 1.77885e11, Poisson=0.271)
-#print(inco_718)
 #print("="*36) # takes a while
 
 # https://asm.matweb.com/search/specificmaterial.asp?bassnum=mq304a
@@ -31,7 +30,7 @@ ss_304 = rs.Material(name="Stainless-304", rho = 8000, E = 1.93e11, Poisson=0.29
 
 #print(rs.Material.available_materials())
 #print("="*36) # takes a while
-ss_A286 = rs.Material(name="Stainless-A286", rho=7944.1327, E=1.999e11, Poisson=0.31)
+ss_A286 = rs.Material(name="Stainless-A286", rho=7944.1327, E=Q_(28.8E6, 'psi'), Poisson=0.31)
 
 #%%____________________PRELIMINARY SHAFT______________________
 # start from turbine to lox inlet
@@ -121,7 +120,7 @@ for i in range(STEP_COUNT):
     laby_od_temp += 2*STEP_SIZE;
 '''
 
-IPS_DEDUCT = 0.4; #in
+IPS_DEDUCT = 0; #in
 # Just average the diameters
 PartitionedSection(L=1.4301 - IPS_DEDUCT, partitions=5, odl=0.63 - GAP_DEPTH, odr=0.74 - GAP_DEPTH)
 # END OF LABY
@@ -344,10 +343,27 @@ disk_elements = [
     retaining_nut
 ]
 
+#%% BEARINGS
+
 bearing_alpha = 15 * np.pi / 180;
 
-l_preload = 10; #N
-k_preload = 10; #N   
+def GetEquivalentRadialLoad(alpha_rad: float, F_axial: float) -> float:
+    N = F_axial / np.sin(alpha_rad);
+    return N * np.cos(alpha_rad);
+
+axial_LOX_preload = 100; #N
+axial_RP1_preload = 100; #N
+
+#TODO actually calculate this
+pressfit_LOX_preload = 10; #N
+pressfit_RP1_preload = 10; #N
+
+l_preload = pressfit_LOX_preload+  GetEquivalentRadialLoad(
+    alpha_rad=bearing_alpha, F_axial=axial_LOX_preload
+    ); #N
+k_preload = pressfit_RP1_preload + GetEquivalentRadialLoad(
+    alpha_rad=bearing_alpha, F_axial=axial_RP1_preload
+    ); #N   
 
 kero_bearing1 = rs.BallBearingElement(
     n=0, n_balls=12, d_balls=5.556E-3,
@@ -379,6 +395,7 @@ bearing_elements = [
     lox_bearing2
 ]
 
+#%% FINAL ASSEMBLY
 node_shaft = simple_shaft.add_nodes(add_nodes);
 shaft_elements = node_shaft.shaft_elements;
 

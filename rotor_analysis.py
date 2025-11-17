@@ -56,8 +56,6 @@ RPM_OP = float(50E3)
 def ToAngularFreq(rpm: float) -> float:
     return rpm/60 * 2 * np.pi;
 
-speed_range = np.linspace(0, ToAngularFreq(RPM_GRAPH_MAX), 40)
-
 if PromptBool("Run modal?"):
     mode_shapes = PromptInt("How many mode shapes? (Default: 6)", accept_none=True) or 6;
 
@@ -69,6 +67,8 @@ if PromptBool("Run modal?"):
     elif PromptBool("Plot 2D shapes?"):
         for mode, shape in enumerate(modal.shapes):
             modal.plot_mode_2d(mode, frequency_units="RPM").show();
+
+speed_range = np.linspace(0, ToAngularFreq(RPM_GRAPH_MAX), 100)
 
 if PromptBool("Run and plot Campbell?"):
 
