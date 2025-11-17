@@ -11,8 +11,9 @@ from pathlib import Path
 import plotly.graph_objects as go
 import plotly.io as pio
 
-
 pio.renderers.default = "browser"# "vscode"
+
+PLOT_ROTOR = True;
 
 def safe_int(x: float, tol: float = 1e-9) -> int:
     rounded = round(x);
@@ -70,14 +71,29 @@ def ThreadSection(L: float, major_d: float, minor_d: float, tpi: int | float, nu
     if not thread_right and extra > 1e-9:
         ShaftSection(L=extra, odl=major_d);
 
+overlaps = [];
+def OverlappingSection(L: float, start: float, odl: float, idl: float, odr: float|None=None, idr: float|None=None):
+    overlaps.append({
+        'Start': start,
+        'L': L,
+        'odl': odl,
+        'odr': odr or odl,
+        'idl': idl,
+        'idr': idr or idl
+    })
+
 # UNC 3/8-16 threads
+'''
 ThreadSection(L=0.38,
             major_d=3/8,
             minor_d=0.3005,
             tpi=16,
             num_threads=5)
+'''
+ShaftSection(L=0.33, odl=(3/8 + 0.3005)/2)
+ShaftSection(L=0.05, odl=3/8)
 
-PartitionedSection(L=3.0428, odl=0.3976, partitions=13);
+PartitionedSection(L=3.0428, odl=0.4, partitions=13);
 
 # LABY SECTION
 ShaftSection(L=0.08, odl=0.63)
@@ -104,17 +120,34 @@ for i in range(STEP_COUNT):
 
     laby_od_temp += 2*STEP_SIZE;
 '''
+
+IPS_DEDUCT = 0.4; #in
 # Just average the diameters
-PartitionedSection(L=1.4301, partitions=5, odl=0.63 - GAP_DEPTH, odr=0.74 - GAP_DEPTH)
+PartitionedSection(L=1.4301 - IPS_DEDUCT, partitions=5, odl=0.63 - GAP_DEPTH, odr=0.74 - GAP_DEPTH)
 # END OF LABY
 
 PartitionedSection(L=1.098,odl=0.47244, partitions=4);
 PartitionedSection(L=0.6721,odl=0.375, partitions=3);
+
+# 1/4-20 UNC length 0.25
+'''
 ThreadSection(L=0.7279,
             major_d=1/4,
             minor_d=0.1905,
             tpi=20,
             num_threads=5, thread_right=True);
+'''
+
+PartitionedSection(L=0.7279 - 0.25, odl=1/4, partitions=2)
+ShaftSection(L=0.25, odl=(1/4 + 0.1905)/2);
+
+# Shaft sleeve
+OverlappingSection(L=0.13, start=0.25, odl=1.404, idl=0.81)
+OverlappingSection(L=0.12, start=0.38, odl=1.404, idl=0.4);
+OverlappingSection(L=0.1521, start=0.5, odl=1.384, odr=0.889, idl=0.4);
+OverlappingSection(L=0.788, start=0.6522, odl=0.669, idl=0.4);
+OverlappingSection(L=0.4134, start=1.4402, odl=0.5975, idl=0.4);
+OverlappingSection(L=0.5335, start=1.8536, odl=0.5447, idl=0.4);
 
 #%% SIMPLE SHAFT
 lengths = [];
@@ -141,19 +174,66 @@ shaft_elements = [
 
 simple_shaft = rs.Rotor(shaft_elements=shaft_elements);
 
+#%% Put in Overlapping Shaft Elements
+
+add_nodes = [];
+
+def bruh_search(inch: float, tol: float | None = 1E-5) -> bool:
+    for meter in simple_shaft.nodes_pos:
+        if np.isclose(Q_(meter, 'm'), Q_(inch, 'in'), tol):
+            return True
+    return False
+
+for _, overlap in enumerate(overlaps):
+    n1 = overlap['Start'];
+    if not (bruh_search(n1)):
+        add_nodes.append(n1);
+
+simple_shaft = simple_shaft.add_nodes((np.array(add_nodes) * 0.0254).tolist())
+shaft_elements = simple_shaft.shaft_elements
+
+j = 0;
+
+for node_i, node_pos in enumerate(simple_shaft.nodes_pos):
+    if j == len(overlaps): break;
+    overlap = overlaps[j];
+    if np.abs(Q_(overlap['Start'], 'in') - Q_(node_pos, 'm')) > Q_(1E-4, 'in'):
+        continue
+    
+    j += 1;
+    overlap_shaft_elem = rs.ShaftElement(
+        L=Q_(overlap['L'], 'in'),
+        idl=Q_(overlap['idl'], 'in'),
+        idr=Q_(overlap['idr'], 'in'),
+        odl=Q_(overlap['odl'], 'in'),
+        odr=Q_(overlap['odr'], 'in'),
+        material=ss_A286,
+        n=node_i,
+        gyroscopic=True,
+        shear_effects=True,
+        rotary_inertia=True
+        );
+    shaft_elements.append(overlap_shaft_elem);
+
+simple_shaft = rs.Rotor(shaft_elements=shaft_elements);
+
+#%% Insert Disks and Bearings
 add_nodes = [];
 position_map = {};
 
 def Mark(object: any, position_inch: float):
+    if position_inch >= 4.9430:
+        position_inch -= IPS_DEDUCT;
+    
     position_m = position_inch * 0.0254;
     add_nodes.append(position_m);
     position_map[position_m] = object;
 
 sleeve_nut = rs.DiskElement(
     n=0,
-    m=1.3618E-2,
-    Id=2.0408E-2,
-    Ip=1.5499E-2,
+    m=1.362e-2,
+    Id=5.402e-7,
+    Ip=5.396e-7,
     tag="Sleeve Nut",
     scale_factor=0.25
 )
@@ -161,14 +241,14 @@ Mark(sleeve_nut, 0.08758354);
 
 turbine = rs.DiskElement(
     n=0,
-    m=0.292578,
-    Ip = 3.68819E-4,
-    Id=1.85449E-4,
+    m=0.2915,
+    Ip = 3.68E-4, 
+    Id=1.848E-4,
     tag="Turbine",
     scale_factor=2.2,
     );
 Mark(turbine, 0.15098510);
-
+'''
 rotor_sleeve = rs.DiskElement(
     n=0,
     m=0.0903,
@@ -178,7 +258,7 @@ rotor_sleeve = rs.DiskElement(
     scale_factor=0.5,
 );
 Mark(rotor_sleeve, 0.834645669);
-
+'''
 kero_nut = rs.DiskElement(
     n=0,
     m=0.024601,
@@ -191,9 +271,9 @@ Mark(kero_nut, 1.6013385827);
 
 kero_inducer = rs.DiskElement(
     n=0,
-    m=2.2054E-2,
-    Ip = 1.3141E-6,
-    Id = ((1.1675 + 1.8117)/2)*1E-6,
+    m=7.6e-3,
+    Ip = 6.24e-7,
+    Id = ((4.52 + 4.02)/2)*1e-7,
     tag = "Kero Inducer",
     scale_factor=0.75
 );
@@ -201,9 +281,9 @@ Mark(kero_inducer, 2.68662598425);
 
 kero_impeller = rs.DiskElement(
     n=0,
-    m=6.6809E-2,
-    Ip=1.9328E-5,
-    Id=1.02705E-5,
+    m=3.63e-2,
+    Ip=1.15e-5,
+    Id=6.44e-6,
     tag="Kero Impeller",
     scale_factor=1.25,
     color="Green"
@@ -222,9 +302,9 @@ Mark(lox_bearing_nut, 5.854803937008);
 
 lox_impeller = rs.DiskElement(
     n=0,
-    m=5.2961E-2,
-    Ip=9.9799E-6,
-    Id=5.6119E-6,
+    m=8.4E-2,
+    Ip=1.88e-5,
+    Id=1.13e-5,
     tag="LOX Impeller",
     scale_factor=1.25,
     color="Cyan"
@@ -233,9 +313,9 @@ Mark(lox_impeller, 6.256729133858);
 
 lox_inducer = rs.DiskElement(
     n=0,
-    m=1.8831E-2,
-    Ip=1.2175E-6,
-    Id=(9.1255 + 8.2006)/2*1E-7,
+    m=1.9E-2,
+    Ip=1.23E-6,
+    Id=(9.2 + 8.3)/2*1E-7,
     tag="LOX Inducer",
     scale_factor=0.75,
 )
@@ -254,7 +334,7 @@ Mark(retaining_nut, 7.358319685039);
 disk_elements = [
     sleeve_nut,
     turbine,
-    rotor_sleeve,
+    #rotor_sleeve,
     kero_nut,
     kero_inducer,
     kero_impeller,
@@ -266,8 +346,8 @@ disk_elements = [
 
 bearing_alpha = 15 * np.pi / 180;
 
-l_preload = 100; #N
-k_preload = 100; #N   
+l_preload = 10; #N
+k_preload = 10; #N   
 
 kero_bearing1 = rs.BallBearingElement(
     n=0, n_balls=12, d_balls=5.556E-3,
@@ -319,5 +399,7 @@ rotor_model = rs.Rotor(
     disk_elements=disk_elements,
     bearing_elements=bearing_elements)
 
-rotor_model.plot_rotor().show()
+if PLOT_ROTOR:
+    rotor_model.plot_rotor().show()
 rotor_model.save("MODEL.json")
+print("Rotor model created");

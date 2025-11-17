@@ -1,11 +1,11 @@
 [parameters]
 
 ["ShaftElement_Shaft Element 0"]
-L = 0.00079375
+L = 0.0022246219159999994
 idl = 0.0
-odl = 0.007632699999999999
+odl = 0.008578849999999999
 idr = 0.0
-odr = 0.009524999999999999
+odr = 0.008578849999999999
 n = 0
 axial_force = 0
 torque = 0
@@ -18,11 +18,11 @@ alpha = 0.0
 beta = 0.0
 
 ["ShaftElement_Shaft Element 1"]
-L = 0.00079375
+L = 0.0016103996240000007
 idl = 0.0
-odl = 0.009524999999999999
+odl = 0.008578849999999999
 idr = 0.0
-odr = 0.007632699999999999
+odr = 0.008578849999999999
 n = 1
 axial_force = 0
 torque = 0
@@ -35,11 +35,11 @@ alpha = 0.0
 beta = 0.0
 
 ["ShaftElement_Shaft Element 2"]
-L = 0.0006371219160000001
+L = 0.0025149784599999996
 idl = 0.0
-odl = 0.007632699999999999
+odl = 0.008578849999999999
 idr = 0.0
-odr = 0.009524999999999999
+odr = 0.008578849999999999
 n = 2
 axial_force = 0
 torque = 0
@@ -52,11 +52,11 @@ alpha = 0.0
 beta = 0.0
 
 ["ShaftElement_Shaft Element 3"]
-L = 0.0001566280839999999
+L = 0.002032000000000001
 idl = 0.0
-odl = 0.007632699999999999
+odl = 0.008578849999999999
 idr = 0.0
-odr = 0.009524999999999999
+odr = 0.008578849999999999
 n = 3
 axial_force = 0
 torque = 0
@@ -69,12 +69,12 @@ alpha = 0.0
 beta = 0.0
 
 ["ShaftElement_Shaft Element 4"]
-L = 0.00079375
-idl = 0.0
-odl = 0.009524999999999999
-idr = 0.0
-odr = 0.007632699999999999
-n = 4
+L = 0.003302
+idl = 0.020574000000000002
+odl = 0.035661599999999995
+idr = 0.020574000000000002
+odr = 0.035661599999999995
+n = 3
 axial_force = 0
 torque = 0
 shear_effects = true
@@ -86,12 +86,12 @@ alpha = 0.0
 beta = 0.0
 
 ["ShaftElement_Shaft Element 5"]
-L = 0.00066002154
+L = 0.00127
 idl = 0.0
-odl = 0.007632699999999999
+odl = 0.009524999999999999
 idr = 0.0
 odr = 0.009524999999999999
-n = 5
+n = 4
 axial_force = 0
 torque = 0
 shear_effects = true
@@ -103,12 +103,12 @@ alpha = 0.0
 beta = 0.0
 
 ["ShaftElement_Shaft Element 6"]
-L = 0.00013372845999999996
+L = 0.0030479999999999986
 idl = 0.0
-odl = 0.007632699999999999
+odl = 0.01016
 idr = 0.0
-odr = 0.009524999999999999
-n = 6
+odr = 0.01016
+n = 5
 axial_force = 0
 torque = 0
 shear_effects = true
@@ -120,12 +120,12 @@ alpha = 0.0
 beta = 0.0
 
 ["ShaftElement_Shaft Element 7"]
-L = 0.00079375
-idl = 0.0
-odl = 0.009524999999999999
-idr = 0.0
-odr = 0.007632699999999999
-n = 7
+L = 0.003048
+idl = 0.01016
+odl = 0.035661599999999995
+idr = 0.01016
+odr = 0.035661599999999995
+n = 5
 axial_force = 0
 torque = 0
 shear_effects = true
@@ -137,12 +137,12 @@ alpha = 0.0
 beta = 0.0
 
 ["ShaftElement_Shaft Element 8"]
-L = 0.00079375
+L = 0.0028971630769230785
 idl = 0.0
-odl = 0.007632699999999999
+odl = 0.01016
 idr = 0.0
-odr = 0.009524999999999999
-n = 8
+odr = 0.01016
+n = 6
 axial_force = 0
 torque = 0
 shear_effects = true
@@ -154,12 +154,12 @@ alpha = 0.0
 beta = 0.0
 
 ["ShaftElement_Shaft Element 9"]
-L = 0.00079375
-idl = 0.0
-odl = 0.009524999999999999
-idr = 0.0
-odr = 0.007632699999999999
-n = 9
+L = 0.0038633400000000003
+idl = 0.01016
+odl = 0.03515359999999999
+idr = 0.01016
+odr = 0.0225806
+n = 6
 axial_force = 0
 torque = 0
 shear_effects = true
@@ -171,12 +171,12 @@ alpha = 0.0
 beta = 0.0
 
 ["ShaftElement_Shaft Element 10"]
-L = 0.00079375
+L = 0.0009687169230769201
 idl = 0.0
-odl = 0.007632699999999999
+odl = 0.01016
 idr = 0.0
-odr = 0.009524999999999999
-n = 10
+odr = 0.01016
+n = 7
 axial_force = 0
 torque = 0
 shear_effects = true
@@ -188,12 +188,12 @@ alpha = 0.0
 beta = 0.0
 
 ["ShaftElement_Shaft Element 11"]
-L = 0.00079375
+L = 0.004976446153846157
 idl = 0.0
-odl = 0.009524999999999999
+odl = 0.01016
 idr = 0.0
-odr = 0.007632699999999999
-n = 11
+odr = 0.01016
+n = 8
 axial_force = 0
 torque = 0
 shear_effects = true
@@ -205,12 +205,12 @@ alpha = 0.0
 beta = 0.0
 
 ["ShaftElement_Shaft Element 12"]
-L = 0.0017145
-idl = 0.0
-odl = 0.009524999999999999
-idr = 0.0
-odr = 0.009524999999999999
-n = 12
+L = 0.0200152
+idl = 0.01016
+odl = 0.0169926
+idr = 0.01016
+odr = 0.0169926
+n = 8
 axial_force = 0
 torque = 0
 shear_effects = true
@@ -222,12 +222,12 @@ alpha = 0.0
 beta = 0.0
 
 ["ShaftElement_Shaft Element 13"]
-L = 0.005945163076923077
+L = 2.3534702153842416e-5
 idl = 0.0
-odl = 0.01009904
+odl = 0.01016
 idr = 0.0
-odr = 0.01009904
-n = 13
+odr = 0.01016
+n = 9
 axial_force = 0
 torque = 0
 shear_effects = true
@@ -239,12 +239,12 @@ alpha = 0.0
 beta = 0.0
 
 ["ShaftElement_Shaft Element 14"]
-L = 0.005602836915676921
+L = 0.005921628374769235
 idl = 0.0
-odl = 0.01009904
+odl = 0.01016
 idr = 0.0
-odr = 0.01009904
-n = 14
+odr = 0.01016
+n = 10
 axial_force = 0
 torque = 0
 shear_effects = true
@@ -256,12 +256,12 @@ alpha = 0.0
 beta = 0.0
 
 ["ShaftElement_Shaft Element 15"]
-L = 0.00034232616124615575
+L = 0.004078371691230766
 idl = 0.0
-odl = 0.01009904
+odl = 0.01016
 idr = 0.0
-odr = 0.01009904
-n = 15
+odr = 0.01016
+n = 11
 axial_force = 0
 torque = 0
 shear_effects = true
@@ -273,12 +273,12 @@ alpha = 0.0
 beta = 0.0
 
 ["ShaftElement_Shaft Element 16"]
-L = 2.3534702153842416e-5
+L = 0.001866791385692311
 idl = 0.0
-odl = 0.01009904
+odl = 0.01016
 idr = 0.0
-odr = 0.01009904
-n = 16
+odr = 0.01016
+n = 12
 axial_force = 0
 torque = 0
 shear_effects = true
@@ -290,12 +290,12 @@ alpha = 0.0
 beta = 0.0
 
 ["ShaftElement_Shaft Element 17"]
-L = 0.005921628374769235
+L = 0.0031484276923076874
 idl = 0.0
-odl = 0.01009904
+odl = 0.01016
 idr = 0.0
-odr = 0.01009904
-n = 17
+odr = 0.01016
+n = 13
 axial_force = 0
 torque = 0
 shear_effects = true
@@ -307,12 +307,12 @@ alpha = 0.0
 beta = 0.0
 
 ["ShaftElement_Shaft Element 18"]
-L = 0.004078371691230766
+L = 0.0027967353846153897
 idl = 0.0
-odl = 0.01009904
+odl = 0.01016
 idr = 0.0
-odr = 0.01009904
-n = 18
+odr = 0.01016
+n = 14
 axial_force = 0
 torque = 0
 shear_effects = true
@@ -324,12 +324,12 @@ alpha = 0.0
 beta = 0.0
 
 ["ShaftElement_Shaft Element 19"]
-L = 0.001866791385692311
-idl = 0.0
-odl = 0.01009904
-idr = 0.0
-odr = 0.01009904
-n = 19
+L = 0.010500359999999999
+idl = 0.01016
+odl = 0.0151765
+idr = 0.01016
+odr = 0.0151765
+n = 14
 axial_force = 0
 torque = 0
 shear_effects = true
@@ -341,12 +341,12 @@ alpha = 0.0
 beta = 0.0
 
 ["ShaftElement_Shaft Element 20"]
-L = 0.005945163076923077
+L = 0.0012961846159646132
 idl = 0.0
-odl = 0.01009904
+odl = 0.01016
 idr = 0.0
-odr = 0.01009904
-n = 20
+odr = 0.01016
+n = 15
 axial_force = 0
 torque = 0
 shear_effects = true
@@ -358,12 +358,12 @@ alpha = 0.0
 beta = 0.0
 
 ["ShaftElement_Shaft Element 21"]
-L = 0.0012961846159646132
+L = 0.004648978460958464
 idl = 0.0
-odl = 0.01009904
+odl = 0.01016
 idr = 0.0
-odr = 0.01009904
-n = 21
+odr = 0.01016
+n = 16
 axial_force = 0
 torque = 0
 shear_effects = true
@@ -375,12 +375,12 @@ alpha = 0.0
 beta = 0.0
 
 ["ShaftElement_Shaft Element 22"]
-L = 0.004648978460958464
+L = 0.0017584615384615369
 idl = 0.0
-odl = 0.01009904
+odl = 0.01016
 idr = 0.0
-odr = 0.01009904
-n = 22
+odr = 0.01016
+n = 17
 axial_force = 0
 torque = 0
 shear_effects = true
@@ -392,12 +392,12 @@ alpha = 0.0
 beta = 0.0
 
 ["ShaftElement_Shaft Element 23"]
-L = 0.005945163076923077
+L = 0.00418670153846154
 idl = 0.0
-odl = 0.01009904
+odl = 0.01016
 idr = 0.0
-odr = 0.01009904
-n = 23
+odr = 0.01016
+n = 18
 axial_force = 0
 torque = 0
 shear_effects = true
@@ -409,12 +409,12 @@ alpha = 0.0
 beta = 0.0
 
 ["ShaftElement_Shaft Element 24"]
-L = 0.005945163076923077
-idl = 0.0
-odl = 0.01009904
-idr = 0.0
-odr = 0.01009904
-n = 24
+L = 0.0135509
+idl = 0.01016
+odl = 0.013835379999999998
+idr = 0.01016
+odr = 0.013835379999999998
+n = 18
 axial_force = 0
 torque = 0
 shear_effects = true
@@ -428,10 +428,10 @@ beta = 0.0
 ["ShaftElement_Shaft Element 25"]
 L = 0.005945163076923077
 idl = 0.0
-odl = 0.01009904
+odl = 0.01016
 idr = 0.0
-odr = 0.01009904
-n = 25
+odr = 0.01016
+n = 19
 axial_force = 0
 torque = 0
 shear_effects = true
@@ -443,12 +443,12 @@ alpha = 0.0
 beta = 0.0
 
 ["ShaftElement_Shaft Element 26"]
-L = 0.005081832307642304
+L = 0.005945163076923077
 idl = 0.0
-odl = 0.01009904
+odl = 0.01016
 idr = 0.0
-odr = 0.01009904
-n = 26
+odr = 0.01016
+n = 20
 axial_force = 0
 torque = 0
 shear_effects = true
@@ -460,12 +460,12 @@ alpha = 0.0
 beta = 0.0
 
 ["ShaftElement_Shaft Element 27"]
-L = 0.0008633307692807735
+L = 0.005081832307642304
 idl = 0.0
-odl = 0.01009904
+odl = 0.01016
 idr = 0.0
-odr = 0.01009904
-n = 27
+odr = 0.01016
+n = 21
 axial_force = 0
 torque = 0
 shear_effects = true
@@ -477,12 +477,12 @@ alpha = 0.0
 beta = 0.0
 
 ["ShaftElement_Shaft Element 28"]
-L = 0.005945163076923077
+L = 0.0008633307692807735
 idl = 0.0
-odl = 0.01009904
+odl = 0.01016
 idr = 0.0
-odr = 0.01009904
-n = 28
+odr = 0.01016
+n = 22
 axial_force = 0
 torque = 0
 shear_effects = true
@@ -496,10 +496,10 @@ beta = 0.0
 ["ShaftElement_Shaft Element 29"]
 L = 0.005945163076923077
 idl = 0.0
-odl = 0.01009904
+odl = 0.01016
 idr = 0.0
-odr = 0.01009904
-n = 29
+odr = 0.01016
+n = 23
 axial_force = 0
 torque = 0
 shear_effects = true
@@ -511,12 +511,12 @@ alpha = 0.0
 beta = 0.0
 
 ["ShaftElement_Shaft Element 30"]
-L = 0.0009647930769260491
+L = 0.005945163076923077
 idl = 0.0
-odl = 0.01009904
+odl = 0.01016
 idr = 0.0
-odr = 0.01009904
-n = 30
+odr = 0.01016
+n = 24
 axial_force = 0
 torque = 0
 shear_effects = true
@@ -528,12 +528,12 @@ alpha = 0.0
 beta = 0.0
 
 ["ShaftElement_Shaft Element 31"]
-L = 0.004980369999997028
+L = 0.0009647930769260491
 idl = 0.0
-odl = 0.01009904
+odl = 0.01016
 idr = 0.0
-odr = 0.01009904
-n = 31
+odr = 0.01016
+n = 25
 axial_force = 0
 torque = 0
 shear_effects = true
@@ -545,12 +545,12 @@ alpha = 0.0
 beta = 0.0
 
 ["ShaftElement_Shaft Element 32"]
-L = 0.002032
+L = 0.004980369999997028
 idl = 0.0
-odl = 0.016002
+odl = 0.01016
 idr = 0.0
-odr = 0.016002
-n = 32
+odr = 0.01016
+n = 26
 axial_force = 0
 torque = 0
 shear_effects = true
@@ -562,12 +562,12 @@ alpha = 0.0
 beta = 0.0
 
 ["ShaftElement_Shaft Element 33"]
-L = 0.007264908
+L = 0.002032
 idl = 0.0
-odl = 0.015214599999999998
+odl = 0.016002
 idr = 0.0
-odr = 0.0157734
-n = 33
+odr = 0.016002
+n = 27
 axial_force = 0
 torque = 0
 shear_effects = true
@@ -579,12 +579,12 @@ alpha = 0.0
 beta = 0.0
 
 ["ShaftElement_Shaft Element 34"]
-L = 0.007264908
+L = 0.005232908
 idl = 0.0
-odl = 0.0157734
+odl = 0.015214599999999998
 idr = 0.0
-odr = 0.016332199999999998
-n = 34
+odr = 0.0157734
+n = 28
 axial_force = 0
 torque = 0
 shear_effects = true
@@ -596,12 +596,12 @@ alpha = 0.0
 beta = 0.0
 
 ["ShaftElement_Shaft Element 35"]
-L = 0.007264908
+L = 0.005232908
 idl = 0.0
-odl = 0.016332199999999998
+odl = 0.0157734
 idr = 0.0
-odr = 0.016891
-n = 35
+odr = 0.016332199999999998
+n = 29
 axial_force = 0
 torque = 0
 shear_effects = true
@@ -613,12 +613,12 @@ alpha = 0.0
 beta = 0.0
 
 ["ShaftElement_Shaft Element 36"]
-L = 0.007264908
+L = 0.005232908
 idl = 0.0
-odl = 0.016890999999999996
+odl = 0.016332199999999998
 idr = 0.0
-odr = 0.017449799999999998
-n = 36
+odr = 0.016891
+n = 30
 axial_force = 0
 torque = 0
 shear_effects = true
@@ -630,12 +630,12 @@ alpha = 0.0
 beta = 0.0
 
 ["ShaftElement_Shaft Element 37"]
-L = 0.007264908
+L = 0.005232908
 idl = 0.0
-odl = 0.017449799999999998
+odl = 0.016890999999999996
 idr = 0.0
-odr = 0.0180086
-n = 37
+odr = 0.017449799999999998
+n = 31
 axial_force = 0
 torque = 0
 shear_effects = true
@@ -647,12 +647,12 @@ alpha = 0.0
 beta = 0.0
 
 ["ShaftElement_Shaft Element 38"]
-L = 0.005251459905999969
+L = 0.005232908
 idl = 0.0
-odl = 0.011999976
+odl = 0.017449799999999998
 idr = 0.0
-odr = 0.011999976
-n = 38
+odr = 0.0180086
+n = 32
 axial_force = 0
 torque = 0
 shear_effects = true
@@ -664,12 +664,12 @@ alpha = 0.0
 beta = 0.0
 
 ["ShaftElement_Shaft Element 39"]
-L = 0.0017208400940000312
+L = 0.0052514599059999825
 idl = 0.0
 odl = 0.011999976
 idr = 0.0
 odr = 0.011999976
-n = 39
+n = 33
 axial_force = 0
 torque = 0
 shear_effects = true
@@ -681,12 +681,12 @@ alpha = 0.0
 beta = 0.0
 
 ["ShaftElement_Shaft Element 40"]
-L = 0.0069723
+L = 0.0017208400940000174
 idl = 0.0
 odl = 0.011999976
 idr = 0.0
 odr = 0.011999976
-n = 40
+n = 34
 axial_force = 0
 torque = 0
 shear_effects = true
@@ -698,12 +698,12 @@ alpha = 0.0
 beta = 0.0
 
 ["ShaftElement_Shaft Element 41"]
-L = 0.0013068599720000148
+L = 0.0069723
 idl = 0.0
 odl = 0.011999976
 idr = 0.0
 odr = 0.011999976
-n = 41
+n = 35
 axial_force = 0
 torque = 0
 shear_effects = true
@@ -715,12 +715,12 @@ alpha = 0.0
 beta = 0.0
 
 ["ShaftElement_Shaft Element 42"]
-L = 0.005665440027999985
+L = 0.0013068599720000148
 idl = 0.0
 odl = 0.011999976
 idr = 0.0
 odr = 0.011999976
-n = 42
+n = 36
 axial_force = 0
 torque = 0
 shear_effects = true
@@ -732,12 +732,12 @@ alpha = 0.0
 beta = 0.0
 
 ["ShaftElement_Shaft Element 43"]
-L = 0.002499460000003214
+L = 0.005665440027999985
 idl = 0.0
 odl = 0.011999976
 idr = 0.0
 odr = 0.011999976
-n = 43
+n = 37
 axial_force = 0
 torque = 0
 shear_effects = true
@@ -749,12 +749,12 @@ alpha = 0.0
 beta = 0.0
 
 ["ShaftElement_Shaft Element 44"]
-L = 0.004472839999996786
+L = 0.002499460000003186
 idl = 0.0
 odl = 0.011999976
 idr = 0.0
 odr = 0.011999976
-n = 44
+n = 38
 axial_force = 0
 torque = 0
 shear_effects = true
@@ -766,12 +766,12 @@ alpha = 0.0
 beta = 0.0
 
 ["ShaftElement_Shaft Element 45"]
-L = 0.005690446666666666
+L = 0.004472839999996814
 idl = 0.0
-odl = 0.009524999999999999
+odl = 0.011999976
 idr = 0.0
-odr = 0.009524999999999999
-n = 45
+odr = 0.011999976
+n = 39
 axial_force = 0
 torque = 0
 shear_effects = true
@@ -783,12 +783,12 @@ alpha = 0.0
 beta = 0.0
 
 ["ShaftElement_Shaft Element 46"]
-L = 4.5613333326572844e-5
+L = 0.005690446666666666
 idl = 0.0
 odl = 0.009524999999999999
 idr = 0.0
 odr = 0.009524999999999999
-n = 46
+n = 40
 axial_force = 0
 torque = 0
 shear_effects = true
@@ -800,12 +800,12 @@ alpha = 0.0
 beta = 0.0
 
 ["ShaftElement_Shaft Element 47"]
-L = 0.0056448333333400935
+L = 4.5613333326572844e-5
 idl = 0.0
 odl = 0.009524999999999999
 idr = 0.0
 odr = 0.009524999999999999
-n = 47
+n = 41
 axial_force = 0
 torque = 0
 shear_effects = true
@@ -817,12 +817,12 @@ alpha = 0.0
 beta = 0.0
 
 ["ShaftElement_Shaft Element 48"]
-L = 0.005690446666666666
+L = 0.0056448333333400935
 idl = 0.0
 odl = 0.009524999999999999
 idr = 0.0
 odr = 0.009524999999999999
-n = 48
+n = 42
 axial_force = 0
 torque = 0
 shear_effects = true
@@ -834,12 +834,12 @@ alpha = 0.0
 beta = 0.0
 
 ["ShaftElement_Shaft Element 49"]
-L = 0.0032815900000022526
+L = 0.005690446666666666
 idl = 0.0
-odl = 0.00635
+odl = 0.009524999999999999
 idr = 0.0
-odr = 0.00635
-n = 49
+odr = 0.009524999999999999
+n = 43
 axial_force = 0
 torque = 0
 shear_effects = true
@@ -851,12 +851,12 @@ alpha = 0.0
 beta = 0.0
 
 ["ShaftElement_Shaft Element 50"]
-L = 0.008857069999997746
+L = 0.003281590000002209
 idl = 0.0
 odl = 0.00635
 idr = 0.0
 odr = 0.00635
-n = 50
+n = 44
 axial_force = 0
 torque = 0
 shear_effects = true
@@ -868,12 +868,12 @@ alpha = 0.0
 beta = 0.0
 
 ["ShaftElement_Shaft Element 51"]
-L = 0.000635
+L = 0.0027877399999977903
 idl = 0.0
-odl = 0.0048387
+odl = 0.00635
 idr = 0.0
 odr = 0.00635
-n = 51
+n = 45
 axial_force = 0
 torque = 0
 shear_effects = true
@@ -885,12 +885,12 @@ alpha = 0.0
 beta = 0.0
 
 ["ShaftElement_Shaft Element 52"]
-L = 0.000635
+L = 0.0060693299999999995
 idl = 0.0
 odl = 0.00635
 idr = 0.0
-odr = 0.0048387
-n = 52
+odr = 0.00635
+n = 46
 axial_force = 0
 torque = 0
 shear_effects = true
@@ -902,12 +902,12 @@ alpha = 0.0
 beta = 0.0
 
 ["ShaftElement_Shaft Element 53"]
-L = 0.000635
+L = 0.004506459999990614
 idl = 0.0
-odl = 0.0048387
+odl = 0.00559435
 idr = 0.0
-odr = 0.00635
-n = 53
+odr = 0.00559435
+n = 47
 axial_force = 0
 torque = 0
 shear_effects = true
@@ -919,12 +919,12 @@ alpha = 0.0
 beta = 0.0
 
 ["ShaftElement_Shaft Element 54"]
-L = 0.000635
+L = 0.001843540000009386
 idl = 0.0
-odl = 0.00635
+odl = 0.00559435
 idr = 0.0
-odr = 0.0048387
-n = 54
+odr = 0.00559435
+n = 48
 axial_force = 0
 torque = 0
 shear_effects = true
@@ -935,154 +935,26 @@ tag = "Shaft Element 54"
 alpha = 0.0
 beta = 0.0
 
-["ShaftElement_Shaft Element 55"]
-L = 0.000635
-idl = 0.0
-odl = 0.0048387
-idr = 0.0
-odr = 0.00635
-n = 55
-axial_force = 0
-torque = 0
-shear_effects = true
-rotary_inertia = true
-gyroscopic = true
-shear_method_calc = "cowper"
-tag = "Shaft Element 55"
-alpha = 0.0
-beta = 0.0
-
-["ShaftElement_Shaft Element 56"]
-L = 0.000635
-idl = 0.0
-odl = 0.00635
-idr = 0.0
-odr = 0.0048387
-n = 56
-axial_force = 0
-torque = 0
-shear_effects = true
-rotary_inertia = true
-gyroscopic = true
-shear_method_calc = "cowper"
-tag = "Shaft Element 56"
-alpha = 0.0
-beta = 0.0
-
-["ShaftElement_Shaft Element 57"]
-L = 0.000635
-idl = 0.0
-odl = 0.0048387
-idr = 0.0
-odr = 0.00635
-n = 57
-axial_force = 0
-torque = 0
-shear_effects = true
-rotary_inertia = true
-gyroscopic = true
-shear_method_calc = "cowper"
-tag = "Shaft Element 57"
-alpha = 0.0
-beta = 0.0
-
-["ShaftElement_Shaft Element 58"]
-L = 6.14599999906629e-5
-idl = 0.0
-odl = 0.00635
-idr = 0.0
-odr = 0.0048387
-n = 58
-axial_force = 0
-torque = 0
-shear_effects = true
-rotary_inertia = true
-gyroscopic = true
-shear_method_calc = "cowper"
-tag = "Shaft Element 58"
-alpha = 0.0
-beta = 0.0
-
-["ShaftElement_Shaft Element 59"]
-L = 0.0005735400000093371
-idl = 0.0
-odl = 0.00635
-idr = 0.0
-odr = 0.0048387
-n = 59
-axial_force = 0
-torque = 0
-shear_effects = true
-rotary_inertia = true
-gyroscopic = true
-shear_method_calc = "cowper"
-tag = "Shaft Element 59"
-alpha = 0.0
-beta = 0.0
-
-["ShaftElement_Shaft Element 60"]
-L = 0.000635
-idl = 0.0
-odl = 0.0048387
-idr = 0.0
-odr = 0.00635
-n = 60
-axial_force = 0
-torque = 0
-shear_effects = true
-rotary_inertia = true
-gyroscopic = true
-shear_method_calc = "cowper"
-tag = "Shaft Element 60"
-alpha = 0.0
-beta = 0.0
-
-["ShaftElement_Shaft Element 61"]
-L = 0.000635
-idl = 0.0
-odl = 0.00635
-idr = 0.0
-odr = 0.0048387
-n = 61
-axial_force = 0
-torque = 0
-shear_effects = true
-rotary_inertia = true
-gyroscopic = true
-shear_method_calc = "cowper"
-tag = "Shaft Element 61"
-alpha = 0.0
-beta = 0.0
-
 ["DiskElement_Sleeve Nut"]
-n = 3
-m = 0.013618
-Id = 0.020408
-Ip = 0.015499
+n = 1
+m = 0.01362
+Id = 5.402e-7
+Ip = 5.396e-7
 tag = "Sleeve Nut"
 scale_factor = 0.25
 color = "Firebrick"
 
 [DiskElement_Turbine]
-n = 6
-m = 0.292578
-Id = 0.000185449
-Ip = 0.000368819
+n = 2
+m = 0.2915
+Id = 0.0001848
+Ip = 0.000368
 tag = "Turbine"
 scale_factor = 2.2
 color = "Firebrick"
 
-["DiskElement_Rotor Sleeve"]
-n = 15
-m = 0.0903
-Id = 2.4e-5
-Ip = 1.1e-5
-tag = "Rotor Sleeve"
-scale_factor = 0.5
-color = "Firebrick"
-
 ["DiskElement_Kero Bearing Nut"]
-n = 22
+n = 16
 m = 0.024601
 Id = 1.65e-6
 Ip = 2.96e-6
@@ -1091,25 +963,25 @@ scale_factor = 0.5
 color = "Firebrick"
 
 ["DiskElement_Kero Inducer"]
-n = 27
-m = 0.022054
-Id = 1.4895999999999999e-6
-Ip = 1.3141e-6
+n = 22
+m = 0.0076
+Id = 4.2699999999999995e-7
+Ip = 6.24e-7
 tag = "Kero Inducer"
 scale_factor = 0.75
 color = "Firebrick"
 
 ["DiskElement_Kero Impeller"]
-n = 31
-m = 0.066809
-Id = 1.02705e-5
-Ip = 1.9328e-5
+n = 26
+m = 0.0363
+Id = 6.44e-6
+Ip = 1.15e-5
 tag = "Kero Impeller"
 scale_factor = 1.25
 color = "Green"
 
 ["DiskElement_LOX Bearing Nut"]
-n = 44
+n = 39
 m = 0.010346
 Id = 5.6097e-7
 Ip = 3.4483e-7
@@ -1118,25 +990,25 @@ scale_factor = 0.5
 color = "Firebrick"
 
 ["DiskElement_LOX Impeller"]
-n = 47
-m = 0.052961
-Id = 5.6119e-6
-Ip = 9.9799e-6
+n = 42
+m = 0.084
+Id = 1.13e-5
+Ip = 1.88e-5
 tag = "LOX Impeller"
 scale_factor = 1.25
 color = "Cyan"
 
 ["DiskElement_LOX Inducer"]
-n = 50
-m = 0.018831
-Id = 8.66305e-7
-Ip = 1.2175e-6
+n = 45
+m = 0.019
+Id = 8.75e-7
+Ip = 1.23e-6
 tag = "LOX Inducer"
 scale_factor = 0.75
 color = "Firebrick"
 
 ["DiskElement_Retaining Nut"]
-n = 59
+n = 48
 m = 0.004491
 Id = 6.8793e-8
 Ip = 7.134e-8
@@ -1147,24 +1019,24 @@ color = "Firebrick"
 [BallBearingElement_KeroBearing1]
 alpha = 0.2617993877991494
 color = "#355d7a"
-cxx = [ 422.97485075695016,]
+cxx = [ 196.32753441724915,]
 cxy = [ 0.0,]
 cyx = [ 0.0,]
-cyy = [ 660.8982043077345,]
+cyy = [ 306.7617725269518,]
 czz = [ 0,]
 d_balls = 0.005556
-fs = 100
-kxx = [ 33837988.06055601,]
+fs = 10
+kxx = [ 15706202.753379932,]
 kxy = [ 0.0,]
 kyx = [ 0.0,]
-kyy = [ 52871856.34461876,]
+kyy = [ 24540941.802156143,]
 kzz = [ 0,]
 mxx = [ 0,]
 mxy = [ 0,]
 myx = [ 0,]
 myy = [ 0,]
 mzz = [ 0,]
-n = 17
+n = 10
 n_balls = 12
 scale_factor = 1
 tag = "KeroBearing1"
@@ -1172,24 +1044,24 @@ tag = "KeroBearing1"
 [BallBearingElement_LOXBearing1]
 alpha = 0.2617993877991494
 color = "#355d7a"
-cxx = [ 328.4758374313451,]
+cxx = [ 152.46497791329384,]
 cxy = [ 0.0,]
 cyx = [ 0.0,]
-cyy = [ 585.2576168041784,]
+cyy = [ 271.65252189451013,]
 czz = [ 0,]
 d_balls = 0.005556
-fs = 100
-kxx = [ 26278066.994507607,]
+fs = 10
+kxx = [ 12197198.233063506,]
 kxy = [ 0.0,]
 kyx = [ 0.0,]
-kyy = [ 46820609.34433427,]
+kyy = [ 21732201.75156081,]
 kzz = [ 0,]
 mxx = [ 0,]
 mxy = [ 0,]
 myx = [ 0,]
 myy = [ 0,]
 mzz = [ 0,]
-n = 39
+n = 34
 n_balls = 10
 scale_factor = 1
 tag = "LOXBearing1"
@@ -1197,24 +1069,24 @@ tag = "LOXBearing1"
 [BallBearingElement_LOXBearing2]
 alpha = 0.2617993877991494
 color = "#355d7a"
-cxx = [ 328.4758374313451,]
+cxx = [ 152.46497791329384,]
 cxy = [ 0.0,]
 cyx = [ 0.0,]
-cyy = [ 585.2576168041784,]
+cyy = [ 271.65252189451013,]
 czz = [ 0,]
 d_balls = 0.005556
-fs = 100
-kxx = [ 26278066.994507607,]
+fs = 10
+kxx = [ 12197198.233063506,]
 kxy = [ 0.0,]
 kyx = [ 0.0,]
-kyy = [ 46820609.34433427,]
+kyy = [ 21732201.75156081,]
 kzz = [ 0,]
 mxx = [ 0,]
 mxy = [ 0,]
 myx = [ 0,]
 myy = [ 0,]
 mzz = [ 0,]
-n = 42
+n = 37
 n_balls = 10
 scale_factor = 1
 tag = "LOXBearing2"
@@ -1598,55 +1470,6 @@ G_s = 76297709923.66412
 color = "#525252"
 
 ["ShaftElement_Shaft Element 54".material]
-name = "Stainless-A286"
-rho = 7944.1327
-E = 199900000000.0
-G_s = 76297709923.66412
-color = "#525252"
-
-["ShaftElement_Shaft Element 55".material]
-name = "Stainless-A286"
-rho = 7944.1327
-E = 199900000000.0
-G_s = 76297709923.66412
-color = "#525252"
-
-["ShaftElement_Shaft Element 56".material]
-name = "Stainless-A286"
-rho = 7944.1327
-E = 199900000000.0
-G_s = 76297709923.66412
-color = "#525252"
-
-["ShaftElement_Shaft Element 57".material]
-name = "Stainless-A286"
-rho = 7944.1327
-E = 199900000000.0
-G_s = 76297709923.66412
-color = "#525252"
-
-["ShaftElement_Shaft Element 58".material]
-name = "Stainless-A286"
-rho = 7944.1327
-E = 199900000000.0
-G_s = 76297709923.66412
-color = "#525252"
-
-["ShaftElement_Shaft Element 59".material]
-name = "Stainless-A286"
-rho = 7944.1327
-E = 199900000000.0
-G_s = 76297709923.66412
-color = "#525252"
-
-["ShaftElement_Shaft Element 60".material]
-name = "Stainless-A286"
-rho = 7944.1327
-E = 199900000000.0
-G_s = 76297709923.66412
-color = "#525252"
-
-["ShaftElement_Shaft Element 61".material]
 name = "Stainless-A286"
 rho = 7944.1327
 E = 199900000000.0
