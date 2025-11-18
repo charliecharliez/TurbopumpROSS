@@ -1,6 +1,8 @@
 import ross as rs
 import numpy as np
 
+from ross.units import Q_
+
 # import plotly just to guarantee that plots will appear in the docs
 import plotly
 print(rs.__version__)
@@ -61,7 +63,7 @@ def ToAngularFreq(rpm: float) -> float:
     return rpm/60 * 2 * np.pi;
 
 if PromptBool("Run modal?"):
-    mode_shapes = PromptInt("How many mode shapes? (Default: 6)", accept_none=True) or 6;
+    mode_shapes = PromptInt("How many mode shapes? (Default: 5)", accept_none=True) or 5;
 
     modal = rotor.run_modal(ToAngularFreq(RPM_OP), num_modes=2*mode_shapes, sparse=True);
 
@@ -72,19 +74,20 @@ if PromptBool("Run modal?"):
         for mode, shape in enumerate(modal.shapes):
             modal.plot_mode_2d(mode, frequency_units="RPM").show();
 
-speed_range = np.linspace(0, ToAngularFreq(RPM_GRAPH_MAX), 1000)
+speed_range = np.linspace(0, ToAngularFreq(RPM_GRAPH_MAX), 30)
 
 if PromptBool("Run and plot Campbell?"):
 
-    frequencies = PromptInt("Frequencies to run? (Default: 6)", accept_none=True) or 6;
+    frequencies = PromptInt("Frequencies to run? (Default: 5)", accept_none=True) or 5;
 
     campbell = rotor.run_campbell(
         speed_range=speed_range,
         frequencies=frequencies,
-        torsional_analysis=False,
         frequency_type="wd"
     )
+
     campbell_fig = campbell.plot()
+    campbell_fig.update_yaxes(range=[0, 90e3]);
     campbell_fig.show()
 
 #%% Mass
