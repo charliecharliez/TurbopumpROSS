@@ -43,6 +43,10 @@ rotor = rs.Rotor.load("MODEL.json")
 rotor_fig = rotor.plot_rotor()
 rotor_fig.update_yaxes(scaleanchor="x", scaleratio=1)
 rotor_fig.update_xaxes(constrain="domain")
+
+for bearing in rotor.bearing_elements:
+    print(bearing.tag + " stiffness: ", bearing.K(0))
+
 if PromptBool("Plot rotor model?"):
     rotor_fig.show()
 
@@ -68,7 +72,7 @@ if PromptBool("Run modal?"):
         for mode, shape in enumerate(modal.shapes):
             modal.plot_mode_2d(mode, frequency_units="RPM").show();
 
-speed_range = np.linspace(0, ToAngularFreq(RPM_GRAPH_MAX), 100)
+speed_range = np.linspace(0, ToAngularFreq(RPM_GRAPH_MAX), 1000)
 
 if PromptBool("Run and plot Campbell?"):
 

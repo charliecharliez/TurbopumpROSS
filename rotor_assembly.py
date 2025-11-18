@@ -351,8 +351,8 @@ def GetEquivalentRadialLoad(alpha_rad: float, F_axial: float) -> float:
     N = F_axial / np.sin(alpha_rad);
     return N * np.cos(alpha_rad);
 
-axial_LOX_preload = 100; #N
-axial_RP1_preload = 100; #N
+axial_LOX_preload = 50; #N
+axial_RP1_preload = 50; #N
 
 #TODO actually calculate this
 pressfit_LOX_preload = 10; #N
