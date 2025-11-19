@@ -196,6 +196,7 @@ j = 0;
 for node_i, node_pos in enumerate(simple_shaft.nodes_pos):
     if j == len(overlaps): break;
     overlap = overlaps[j];
+    
     if np.abs(Q_(overlap['Start'], 'in') - Q_(node_pos, 'm')) > Q_(1E-4, 'in'):
         continue
     
@@ -417,6 +418,26 @@ rotor_model = rs.Rotor(
     bearing_elements=bearing_elements)
 
 if PLOT_ROTOR:
-    rotor_model.plot_rotor().show()
-rotor_model.save("MODEL.json")
+    fig = rotor_model.plot_rotor(length_units='in')
+    fig.update_layout(
+        yaxis=dict(
+            showgrid=True,
+            dtick=0.5,
+            scaleanchor='x',  # link y-axis scale to x-axis
+        ),
+        xaxis=dict(
+            dtick=0.5,
+            showgrid=True,
+            #scaleratio=1,
+            scaleanchor=None,
+        ),
+    )
+    fig.show()
+
+name: str = input("Enter model name? (Default: \'MODEL\')")
+
+if name == '':
+    name = 'MODEL'
+rotor_model.save(name + ".json")
+
 print("Rotor model created");

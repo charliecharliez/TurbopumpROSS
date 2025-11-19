@@ -60,20 +60,30 @@ def PromptInt(message: str, accept_none: bool=False) -> int | None:
 pio.renderers.default = "browser"# "vscode"
 
 rotor = rs.Rotor.load("MODEL.json")
-rotor_fig = rotor.plot_rotor()
-rotor_fig.update_yaxes(scaleanchor="x", scaleratio=1)
-rotor_fig.update_xaxes(constrain="domain")
 
 for bearing in rotor.bearing_elements:
     print(bearing.tag + " stiffness: ", bearing.K(0))
 
 if PromptBool("Plot rotor model?"):
+    rotor_fig = rotor.plot_rotor(check_sld=True, length_units='in');
+
+    rotor_fig.update_layout(
+        yaxis=dict(
+            showgrid=True,
+            dtick=0.5,
+            scaleanchor='x',  # link y-axis scale to x-axis
+        ),
+        xaxis=dict(
+            dtick=0.5,
+            showgrid=True,
+            #scaleratio=1,
+            scaleanchor=None,
+        ),
+        #width=600,
+        #height=600  # make figure square so circles look round
+    )
     rotor_fig.show()
     SaveFigure(rotor_fig, "RotorModel");
-
-PLOT_3D = False;
-PLOT_2D = False;
-PLOT_CAMPBELL = True;
 
 RPM_GRAPH_MAX = float(70E3);
 RPM_OP = float(50E3)
