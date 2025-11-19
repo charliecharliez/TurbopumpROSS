@@ -1,4 +1,5 @@
 import ross as rs
+
 import numpy as np
 import os
 
@@ -12,14 +13,21 @@ from pathlib import Path
 import plotly.graph_objects as go
 import plotly.io as pio
 
-figures = {};
-def SaveFigure(fig, name: str, append_num: int | None=None):
-    if not name in figures:
-        figures[name] = fig;
-    else:
-        if append_num is None: append_num = 0;
+figures: dict[str: dict] = {};
+def SaveFigure(fig, name: str, file_extension: str | None = 'html', append_num: int | None=None) -> None:
+
+    if name in figures:
+
+        if append_num is None:
+            append_num = 0;
         append_num += 1;
-        SaveFigure(fig, name + str(append_num), append_num);
+        # recursive
+        return SaveFigure(fig, name + str(append_num), append_num);
+    
+    figures[name] = {
+            'fig': fig,
+            'extension': file_extension,
+        };
 
 def PromptBool(message: str) -> bool:
     value = None;
@@ -61,7 +69,7 @@ for bearing in rotor.bearing_elements:
 
 if PromptBool("Plot rotor model?"):
     rotor_fig.show()
-    SaveFigure(rotor_fig, "RotorModel")
+    SaveFigure(rotor_fig, "RotorModel");
 
 PLOT_3D = False;
 PLOT_2D = False;
@@ -135,5 +143,11 @@ if PromptBool("Save result figures?"):
     if not os.path.isdir(folder_path):
         os.makedirs(folder_path);
     #print(figures)
-    for name, fig in figures.items():
-        fig.write_html(folder_path + '/' + name + '.html');
+    for name, v in figures.items():
+        fig = v['fig'];
+        file_extension = v['extension'];
+
+        if file_extension == 'html':
+            fig.write_html(folder_path + "/" + name + '.html');
+        else:
+            fig.write_image(folder_path + '/' + name + '.' + file_extension);
