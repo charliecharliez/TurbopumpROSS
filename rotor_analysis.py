@@ -59,13 +59,15 @@ def PromptInt(message: str, accept_none: bool=False) -> int | None:
 
 pio.renderers.default = "browser"# "vscode"
 
-rotor = rs.Rotor.load("MODEL.json")
+model_name: str = input("Load model (Default: \'MODEL\')?:\n")
+if model_name == '': model_name = 'MODEL'
+rotor = rs.Rotor.load(model_name + ".json")
 
 for bearing in rotor.bearing_elements:
     print(bearing.tag + " stiffness: ", bearing.K(0))
 
 if PromptBool("Plot rotor model?"):
-    rotor_fig = rotor.plot_rotor(check_sld=True, length_units='in');
+    rotor_fig = rotor.plot_rotor(check_sld=False, length_units='in');
 
     rotor_fig.update_layout(
         yaxis=dict(
@@ -142,7 +144,7 @@ print(f"Rotor mass: %.3f kg" % mass_sum);
 
 #%% Save figs
 if PromptBool("Save result figures?"):
-    folder_name: str = input("Results folder name:?");
+    folder_name: str = input("Results folder name:?\n");
     
     if folder_name == "":
         folder_name = 'Default'

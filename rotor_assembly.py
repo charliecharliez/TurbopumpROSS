@@ -43,6 +43,7 @@ def ShaftSection(L: float, odl: float, odr: float | None = None) -> None:
     pre_list.append({"L": L, "odl": odl, "odr": odr});
 
 def PartitionedSection(L: float, odl: float, partitions: int, odr: float | None = None):
+    #return ShaftSection(L, odl=odl, odr=odr)
     if odr is None:
         odr = odl;
     SECTION_LENGTH = L / partitions;
@@ -122,7 +123,7 @@ for i in range(STEP_COUNT):
 
 IPS_DEDUCT = 0; #in
 # Just average the diameters
-PartitionedSection(L=1.4301 - IPS_DEDUCT, partitions=5, odl=0.63 - GAP_DEPTH, odr=0.74 - GAP_DEPTH)
+PartitionedSection(L=1.4301 - IPS_DEDUCT, odl=0.63 - GAP_DEPTH, odr=0.74 - GAP_DEPTH, partitions=5)
 # END OF LABY
 
 PartitionedSection(L=1.098,odl=0.47244, partitions=4);
@@ -174,48 +175,6 @@ shaft_elements = [
 simple_shaft = rs.Rotor(shaft_elements=shaft_elements);
 
 #%% Put in Overlapping Shaft Elements
-
-add_nodes = [];
-
-def bruh_search(inch: float, tol: float | None = 1E-5) -> bool:
-    for meter in simple_shaft.nodes_pos:
-        if np.isclose(Q_(meter, 'm'), Q_(inch, 'in'), tol):
-            return True
-    return False
-
-for _, overlap in enumerate(overlaps):
-    n1 = overlap['Start'];
-    if not (bruh_search(n1)):
-        add_nodes.append(n1);
-
-simple_shaft = simple_shaft.add_nodes((np.array(add_nodes) * 0.0254).tolist())
-shaft_elements = simple_shaft.shaft_elements
-
-j = 0;
-
-for node_i, node_pos in enumerate(simple_shaft.nodes_pos):
-    if j == len(overlaps): break;
-    overlap = overlaps[j];
-    
-    if np.abs(Q_(overlap['Start'], 'in') - Q_(node_pos, 'm')) > Q_(1E-4, 'in'):
-        continue
-    
-    j += 1;
-    overlap_shaft_elem = rs.ShaftElement(
-        L=Q_(overlap['L'], 'in'),
-        idl=Q_(overlap['idl'], 'in'),
-        idr=Q_(overlap['idr'], 'in'),
-        odl=Q_(overlap['odl'], 'in'),
-        odr=Q_(overlap['odr'], 'in'),
-        material=ss_A286,
-        n=node_i,
-        gyroscopic=True,
-        shear_effects=True,
-        rotary_inertia=True
-        );
-    shaft_elements.append(overlap_shaft_elem);
-
-simple_shaft = rs.Rotor(shaft_elements=shaft_elements);
 
 #%% Insert Disks and Bearings
 add_nodes = [];
@@ -400,17 +359,59 @@ bearing_elements = [
 node_shaft = simple_shaft.add_nodes(add_nodes);
 shaft_elements = node_shaft.shaft_elements;
 
+add_nodes = [];
+
+def bruh_search(inch: float, tol: float | None = 1E-5) -> bool:
+    for meter in simple_shaft.nodes_pos:
+        if np.isclose(Q_(meter, 'm'), Q_(inch, 'in'), tol):
+            return True
+    return False
+
+for _, overlap in enumerate(overlaps):
+    n1 = overlap['Start'];
+    if not (bruh_search(n1)):
+        add_nodes.append(n1);
+
+overlap_insert_shaft = node_shaft.add_nodes((np.array(add_nodes) * 0.0254).tolist())
+shaft_elements = overlap_insert_shaft.shaft_elements
+
 def FindClose(from_list: any, value: float) -> float | None:
     for v in from_list:
         if abs(value - v) < 1e-9:
             return v
 
-for i in range(len(node_shaft.nodes_pos)):
-    position = node_shaft.nodes_pos[i];
-    key = FindClose(position_map.keys(), position);
-    if key is None: continue
-    element = position_map[key]
-    element.n = i;
+overlap_index = 0;
+
+for node_i, node_pos in enumerate(overlap_insert_shaft.nodes_pos):
+    key = FindClose(position_map.keys(), node_pos);
+    if not key is None:
+        element = position_map[key]
+        element.n = node_i;
+
+    if overlap_index == len(overlaps): continue;
+    overlap = overlaps[overlap_index];
+    
+    if np.abs(Q_(overlap['Start'], 'in') - Q_(node_pos, 'm')) > Q_(1E-4, 'in'):
+        continue
+    
+    overlap_index += 1;
+    if overlap_index==6:
+        print(overlap)
+        print("\n", node_i)
+    #print("\n", node_i)
+    overlap_shaft_elem = rs.ShaftElement(
+        L=Q_(overlap['L'], 'in'),
+        idl=Q_(overlap['idl'], 'in'),
+        idr=Q_(overlap['idr'], 'in'),
+        odl=Q_(overlap['odl'], 'in'),
+        odr=Q_(overlap['odr'], 'in'),
+        material=ss_A286,
+        n=node_i,
+        gyroscopic=True,
+        shear_effects=True,
+        rotary_inertia=True
+        );
+    shaft_elements.append(overlap_shaft_elem);
 
 rotor_model = rs.Rotor(
     shaft_elements=shaft_elements,
@@ -418,7 +419,7 @@ rotor_model = rs.Rotor(
     bearing_elements=bearing_elements)
 
 if PLOT_ROTOR:
-    fig = rotor_model.plot_rotor(length_units='in')
+    fig = rotor_model.plot_rotor(length_units='in', check_sld=True)
     fig.update_layout(
         yaxis=dict(
             showgrid=True,
@@ -434,7 +435,7 @@ if PLOT_ROTOR:
     )
     fig.show()
 
-name: str = input("Enter model name? (Default: \'MODEL\')")
+name: str = input("Enter model name? (Default: \'MODEL\')\n")
 
 if name == '':
     name = 'MODEL'
