@@ -1,5 +1,6 @@
 import ross as rs
 import numpy as np
+import os
 
 from ross.units import Q_
 
@@ -10,6 +11,15 @@ from pathlib import Path
 
 import plotly.graph_objects as go
 import plotly.io as pio
+
+figures = {};
+def SaveFigure(fig, name: str, append_num: int | None=None):
+    if not name in figures:
+        figures[name] = fig;
+    else:
+        if append_num is None: append_num = 0;
+        append_num += 1;
+        SaveFigure(fig, name + str(append_num), append_num);
 
 def PromptBool(message: str) -> bool:
     value = None;
@@ -51,6 +61,7 @@ for bearing in rotor.bearing_elements:
 
 if PromptBool("Plot rotor model?"):
     rotor_fig.show()
+    SaveFigure(rotor_fig, "RotorModel")
 
 PLOT_3D = False;
 PLOT_2D = False;
@@ -66,15 +77,24 @@ if PromptBool("Run modal?"):
     mode_shapes = PromptInt("How many mode shapes? (Default: 5)", accept_none=True) or 5;
 
     modal = rotor.run_modal(ToAngularFreq(RPM_OP), num_modes=2*mode_shapes, sparse=True);
+    
+    shape_figs = [];
 
-    if PromptBool("Plot 3D shapes?"):
-        for mode, shape in enumerate(modal.shapes):
-            modal.plot_mode_3d(mode, frequency_units="RPM").show();
-    elif PromptBool("Plot 2D shapes?"):
-        for mode, shape in enumerate(modal.shapes):
-            modal.plot_mode_2d(mode, frequency_units="RPM").show();
+    guh = (PromptBool("Plot 3D shapes?") and 3) or (PromptBool("Plot 2D shapes?") and 2) or 0
 
-speed_range = np.linspace(0, ToAngularFreq(RPM_GRAPH_MAX), 30)
+    if guh != 0:
+        for mode, shape in enumerate(modal.shapes):
+            if guh == 3:
+                fig = modal.plot_mode_3d(mode, frequency_units="RPM");
+            else:
+                fig = modal.plot_mode_2d(mode, frequency_units="RPM");
+            shape_figs.append(fig)
+            SaveFigure(fig, name=str(guh) + "D_ShapeMode" + str(mode));
+
+    for fig in shape_figs:
+        fig.show()
+
+speed_range = np.linspace(0, ToAngularFreq(RPM_GRAPH_MAX), 70)
 
 if PromptBool("Run and plot Campbell?"):
 
@@ -87,6 +107,7 @@ if PromptBool("Run and plot Campbell?"):
     )
 
     campbell_fig = campbell.plot()
+    SaveFigure(campbell_fig, "CampbellDiagram")
     campbell_fig.update_yaxes(range=[0, 90e3]);
     campbell_fig.show()
 
@@ -100,3 +121,19 @@ for v in rotor.disk_elements:
 mass_sum += shaft_mass_sum
 
 print(f"Rotor mass: %.3f kg" % mass_sum);
+
+#%% Save figs
+if PromptBool("Save result figures?"):
+    folder_name: str = input("Results folder name:?");
+    
+    if folder_name == "":
+        folder_name = 'Default'
+    DIR = os.getcwd();
+    results_dir = os.path.join(DIR, 'Results');
+    folder_path = os.path.join(results_dir, folder_name);
+
+    if not os.path.isdir(folder_path):
+        os.makedirs(folder_path);
+    #print(figures)
+    for name, fig in figures.items():
+        fig.write_html(folder_path + '/' + name + '.html');
