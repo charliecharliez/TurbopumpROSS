@@ -14,6 +14,9 @@ from pathlib import Path
 import plotly.graph_objects as go
 import plotly.io as pio
 
+from helpers import PromptBool
+from helpers import PromptInt
+
 figures: dict[str: dict] = {};
 def SaveFigure(fig, name: str, file_extension: str | None = 'html', append_num: int | None=None) -> None:
 
@@ -29,34 +32,6 @@ def SaveFigure(fig, name: str, file_extension: str | None = 'html', append_num: 
             'fig': fig,
             'extension': file_extension,
         };
-
-def PromptBool(message: str) -> bool:
-    value = None;
-    while value is None:
-        response = input(message + "\nEnter \'y\' or \'n\'\n");
-        #print('\n')
-        if response == 'y' or response == 'Y':
-            value = True
-        elif response == 'n' or response == 'N':
-            value = False
-    print('...\n')
-    return value
-
-def PromptInt(message: str, accept_none: bool=False) -> int | None:
-    value = None
-    APPEND = "\nEnter an integer" + (accept_none and " (optional)" or '') + '\n';
-    while value is None:
-        response = input(message + APPEND);
-        #print('\n')
-        try:
-            value = int(response)
-        except ValueError:
-            if accept_none:
-                print('...\n')
-                return None;
-            continue
-    print('...\n')
-    return value;
 
 pio.renderers.default = "browser"# "vscode"
 

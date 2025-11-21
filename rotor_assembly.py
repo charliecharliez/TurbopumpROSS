@@ -55,21 +55,6 @@ def PartitionedSection(L: float, odl: float, partitions: int, odr: float | None 
             this_odr = this_odl + SLOPE*SECTION_LENGTH;
             ShaftSection(SECTION_LENGTH, odl=this_odl, odr=this_odr);
 
-def ThreadSection(L: float, major_d: float, minor_d: float, tpi: int | float, num_threads: int | None, thread_right: bool=False) -> None:
-    extra = abs(L - (num_threads / tpi))
-
-    if thread_right and extra > 1e-9:
-        ShaftSection(L=extra, odl=major_d);
-    
-    THREAD_HALF_WIDTH = 1.0 / (2 * tpi);
-    for i in range(num_threads * 2):
-        if i % 2 == 0:
-            ShaftSection(L=THREAD_HALF_WIDTH, odl=minor_d, odr=major_d);
-        else:
-            ShaftSection(L=THREAD_HALF_WIDTH, odl=major_d, odr=minor_d);
-    if not thread_right and extra > 1e-9:
-        ShaftSection(L=extra, odl=major_d);
-
 overlaps = [];
 def OverlappingSection(L: float, start: float, odl: float, idl: float, odr: float|None=None, idr: float|None=None) -> None:
     odr: float = not odr is None and odr or odl
@@ -77,7 +62,7 @@ def OverlappingSection(L: float, start: float, odl: float, idl: float, odr: floa
 
     slender_ratio: float = L / (odr + odl) * 2;
     MAX_RATIO: float = 0.75;
-    if slender_ratio > MAX_RATIO:
+    if False and slender_ratio > MAX_RATIO:
         partitions: int = int(slender_ratio / MAX_RATIO) + 1;
         print("PARTITIONS: ",partitions)
         L_i: float = L / partitions;
@@ -104,20 +89,14 @@ def OverlappingSection(L: float, start: float, odl: float, idl: float, odr: floa
     })
 
 # UNC 3/8-16 threads
-'''
-ThreadSection(L=0.38,
-            major_d=3/8,
-            minor_d=0.3005,
-            tpi=16,
-            num_threads=5)
-'''
+
 ShaftSection(L=0.33, odl=(3/8 + 0.3005)/2)
 ShaftSection(L=0.05, odl=3/8)
 
-PartitionedSection(L=3.0428, odl=0.4, partitions=13);
+ShaftSection(L=3.0428, odl=0.4);
 
 # LABY SECTION
-ShaftSection(L=0.08, odl=0.63)
+
 NOTCH_WIDTH = 0.01; #in
 GAP_WIDTH = 0.031; #in
 GAP_DEPTH = 0.031; #in
@@ -127,39 +106,18 @@ STEP_SIZE = 0.011; #in
 laby_od_temp = 0.63; #in
 STEP_COUNT = 6;
 GAPS_PER_STEP = 5;
-'''
-for i in range(STEP_COUNT):
-    for j in range(GAPS_PER_STEP):
-        ShaftSection(L=NOTCH_WIDTH,odl=laby_od_temp);
-        ShaftSection(L=GAP_WIDTH,odl=laby_od_temp - 2*GAP_DEPTH)
-        
-        if j == GAPS_PER_STEP - 1: # last gap before next step
-            if i == STEP_COUNT - 1: # last step
-                ShaftSection(L=NOTCH_WIDTH,odl=laby_od_temp);
-            else:
-                ShaftSection(L=STEP_WIDTH,odl=laby_od_temp);
-
-    laby_od_temp += 2*STEP_SIZE;
-'''
 
 IPS_DEDUCT = 0; #in
 # Just average the diameters
-PartitionedSection(L=1.4301 - IPS_DEDUCT, odl=0.63 - GAP_DEPTH, odr=0.74 - GAP_DEPTH, partitions=5)
+PartitionedSection(L=1.5101 - IPS_DEDUCT, odl=0.63 - GAP_DEPTH, odr=0.74 - GAP_DEPTH, partitions=3)
 # END OF LABY
 
-PartitionedSection(L=1.098,odl=0.47244, partitions=4);
-PartitionedSection(L=0.6721,odl=0.375, partitions=3);
+ShaftSection(L=1.098,odl=0.47244);
+ShaftSection(L=0.6721,odl=0.375);
 
 # 1/4-20 UNC length 0.25
-'''
-ThreadSection(L=0.7279,
-            major_d=1/4,
-            minor_d=0.1905,
-            tpi=20,
-            num_threads=5, thread_right=True);
-'''
 
-PartitionedSection(L=0.7279 - 0.25, odl=1/4, partitions=2)
+ShaftSection(L=0.7279 - 0.25, odl=1/4)
 ShaftSection(L=0.25, odl=(1/4 + 0.1905)/2);
 
 # Shaft sleeve
@@ -351,12 +309,12 @@ kero_bearing1 = rs.BallBearingElement(
     fs=k_preload, alpha=bearing_alpha, tag="KeroBearing1")
 
 Mark(kero_bearing1, 0.84904964),
-
+'''
 kero_bearing2 = rs.BallBearingElement(
     n=0, n_balls=12, d_balls=5.556E-3,
     fs=k_preload, alpha=bearing_alpha, tag="KeroBearing2")
 Mark(kero_bearing2, 1.24275043),
-
+'''
 lox_bearing1 = rs.BallBearingElement(
     n=0, n_balls=10, d_balls=5.556E-3,
     fs=l_preload, alpha=bearing_alpha, tag="LOXBearing1"
@@ -436,6 +394,9 @@ rotor_model = rs.Rotor(
     disk_elements=disk_elements,
     bearing_elements=bearing_elements)
 
+if helpers.PromptBool("Show rotor plot?"):
+    helpers.PlotRotor(rotor_model)
+
 name: str = input("Enter model name? (Default: \'Default\')\n")
 
 if name == '':
@@ -445,7 +406,4 @@ if not os.path.isdir(directory):
     os.makedirs(directory);
 rotor_model.save(directory + '\\MODEL.json');
 
-print("Rotor model created");
-
-if PLOT_ROTOR:
-    helpers.PlotRotor(rotor_model)
+print("Rotor model created in " + directory);
