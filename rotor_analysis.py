@@ -1,5 +1,6 @@
 import ross as rs
 
+import helpers
 import numpy as np
 import os
 
@@ -59,32 +60,23 @@ def PromptInt(message: str, accept_none: bool=False) -> int | None:
 
 pio.renderers.default = "browser"# "vscode"
 
-model_name: str = input("Load model (Default: \'MODEL\')?:\n")
-if model_name == '': model_name = 'MODEL'
-rotor = rs.Rotor.load(model_name + ".json")
+def LoadRotor() -> rs.Rotor:
+    name: str = input("Load model (Default: \'Default\')?:\n")
+    if name == '': name = 'Default'
+    directory = os.getcwd() + '\\Results\\' + name;
+
+    if not os.path.isdir(directory):
+        raise ValueError('In valid directory name');
+
+    return rs.Rotor.load(directory + "\\MODEL.json");
+
+rotor = LoadRotor();
 
 for bearing in rotor.bearing_elements:
     print(bearing.tag + " stiffness: ", bearing.K(0))
 
 if PromptBool("Plot rotor model?"):
-    rotor_fig = rotor.plot_rotor(check_sld=False, length_units='in');
-
-    rotor_fig.update_layout(
-        yaxis=dict(
-            showgrid=True,
-            dtick=0.5,
-            scaleanchor='x',  # link y-axis scale to x-axis
-        ),
-        xaxis=dict(
-            dtick=0.5,
-            showgrid=True,
-            #scaleratio=1,
-            scaleanchor=None,
-        ),
-        #width=600,
-        #height=600  # make figure square so circles look round
-    )
-    rotor_fig.show()
+    rotor_fig = helpers.PlotRotor(rotor)
     SaveFigure(rotor_fig, "RotorModel");
 
 RPM_GRAPH_MAX = float(70E3);

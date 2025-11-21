@@ -1,10 +1,12 @@
 import ross as rs
 import numpy as np
 import math
+import os
 
 from ross.units import Q_
 # import plotly just to guarantee that plots will appear in the docs
 import plotly
+import helpers
 
 from pathlib import Path
 
@@ -418,27 +420,16 @@ rotor_model = rs.Rotor(
     disk_elements=disk_elements,
     bearing_elements=bearing_elements)
 
-if PLOT_ROTOR:
-    fig = rotor_model.plot_rotor(length_units='in', check_sld=True)
-    fig.update_layout(
-        yaxis=dict(
-            showgrid=True,
-            dtick=0.5,
-            scaleanchor='x',  # link y-axis scale to x-axis
-        ),
-        xaxis=dict(
-            dtick=0.5,
-            showgrid=True,
-            #scaleratio=1,
-            scaleanchor=None,
-        ),
-    )
-    fig.show()
+name: str = input("Enter model name? (Default: \'Default\')\n")
 
-name: str = input("Enter model name? (Default: \'MODEL\')\n")
+DIR = os.getcwd();
 
 if name == '':
-    name = 'MODEL'
-rotor_model.save(name + ".json")
+    name = 'Default'
+#print(os.path.join(os.path.join(results_dir, name)))
+rotor_model.save(DIR + '\\Results\\'+ name +'\\MODEL.json');
 
 print("Rotor model created");
+
+if PLOT_ROTOR:
+    helpers.PlotRotor(rotor_model)

@@ -1,0 +1,1477 @@
+[parameters]
+
+["ShaftElement_Shaft Element 0"]
+L = 0.0022246219159999994
+idl = 0.0
+odl = 0.008578849999999999
+idr = 0.0
+odr = 0.008578849999999999
+n = 0
+axial_force = 0
+torque = 0
+shear_effects = true
+rotary_inertia = true
+gyroscopic = true
+shear_method_calc = "cowper"
+tag = "Shaft Element 0"
+alpha = 0.0
+beta = 0.0
+
+["ShaftElement_Shaft Element 1"]
+L = 0.0016103996240000012
+idl = 0.0
+odl = 0.008578849999999999
+idr = 0.0
+odr = 0.008578849999999999
+n = 1
+axial_force = 0
+torque = 0
+shear_effects = true
+rotary_inertia = true
+gyroscopic = true
+shear_method_calc = "cowper"
+tag = "Shaft Element 1"
+alpha = 0.0
+beta = 0.0
+
+["ShaftElement_Shaft Element 2"]
+L = 0.002514978459999999
+idl = 0.0
+odl = 0.008578849999999999
+idr = 0.0
+odr = 0.008578849999999999
+n = 2
+axial_force = 0
+torque = 0
+shear_effects = true
+rotary_inertia = true
+gyroscopic = true
+shear_method_calc = "cowper"
+tag = "Shaft Element 2"
+alpha = 0.0
+beta = 0.0
+
+["ShaftElement_Shaft Element 3"]
+L = 0.002032000000000001
+idl = 0.0
+odl = 0.008578849999999999
+idr = 0.0
+odr = 0.008578849999999999
+n = 3
+axial_force = 0
+torque = 0
+shear_effects = true
+rotary_inertia = true
+gyroscopic = true
+shear_method_calc = "cowper"
+tag = "Shaft Element 3"
+alpha = 0.0
+beta = 0.0
+
+["ShaftElement_Shaft Element 49"]
+L = 0.003302
+idl = 0.020574000000000002
+odl = 0.035661599999999995
+idr = 0.020574000000000002
+odr = 0.035661599999999995
+n = 3
+axial_force = 0
+torque = 0
+shear_effects = true
+rotary_inertia = true
+gyroscopic = true
+shear_method_calc = "cowper"
+tag = "Shaft Element 49"
+alpha = 0.0
+beta = 0.0
+
+["ShaftElement_Shaft Element 4"]
+L = 0.00127
+idl = 0.0
+odl = 0.009524999999999999
+idr = 0.0
+odr = 0.009524999999999999
+n = 4
+axial_force = 0
+torque = 0
+shear_effects = true
+rotary_inertia = true
+gyroscopic = true
+shear_method_calc = "cowper"
+tag = "Shaft Element 4"
+alpha = 0.0
+beta = 0.0
+
+["ShaftElement_Shaft Element 5"]
+L = 0.0030479999999999986
+idl = 0.0
+odl = 0.01016
+idr = 0.0
+odr = 0.01016
+n = 5
+axial_force = 0
+torque = 0
+shear_effects = true
+rotary_inertia = true
+gyroscopic = true
+shear_method_calc = "cowper"
+tag = "Shaft Element 5"
+alpha = 0.0
+beta = 0.0
+
+["ShaftElement_Shaft Element 50"]
+L = 0.003048
+idl = 0.01016
+odl = 0.035661599999999995
+idr = 0.01016
+odr = 0.035661599999999995
+n = 5
+axial_force = 0
+torque = 0
+shear_effects = true
+rotary_inertia = true
+gyroscopic = true
+shear_method_calc = "cowper"
+tag = "Shaft Element 50"
+alpha = 0.0
+beta = 0.0
+
+["ShaftElement_Shaft Element 6"]
+L = 0.0028971630769230785
+idl = 0.0
+odl = 0.01016
+idr = 0.0
+odr = 0.01016
+n = 6
+axial_force = 0
+torque = 0
+shear_effects = true
+rotary_inertia = true
+gyroscopic = true
+shear_method_calc = "cowper"
+tag = "Shaft Element 6"
+alpha = 0.0
+beta = 0.0
+
+["ShaftElement_Shaft Element 51"]
+L = 0.0038633400000000003
+idl = 0.01016
+odl = 0.03515359999999999
+idr = 0.01016
+odr = 0.0225806
+n = 6
+axial_force = 0
+torque = 0
+shear_effects = true
+rotary_inertia = true
+gyroscopic = true
+shear_method_calc = "cowper"
+tag = "Shaft Element 51"
+alpha = 0.0
+beta = 0.0
+
+["ShaftElement_Shaft Element 7"]
+L = 0.0009687169230769201
+idl = 0.0
+odl = 0.01016
+idr = 0.0
+odr = 0.01016
+n = 7
+axial_force = 0
+torque = 0
+shear_effects = true
+rotary_inertia = true
+gyroscopic = true
+shear_method_calc = "cowper"
+tag = "Shaft Element 7"
+alpha = 0.0
+beta = 0.0
+
+["ShaftElement_Shaft Element 8"]
+L = 0.004976446153846157
+idl = 0.0
+odl = 0.01016
+idr = 0.0
+odr = 0.01016
+n = 8
+axial_force = 0
+torque = 0
+shear_effects = true
+rotary_inertia = true
+gyroscopic = true
+shear_method_calc = "cowper"
+tag = "Shaft Element 8"
+alpha = 0.0
+beta = 0.0
+
+["ShaftElement_Shaft Element 52"]
+L = 0.0200152
+idl = 0.01016
+odl = 0.0169926
+idr = 0.01016
+odr = 0.0169926
+n = 8
+axial_force = 0
+torque = 0
+shear_effects = true
+rotary_inertia = true
+gyroscopic = true
+shear_method_calc = "cowper"
+tag = "Shaft Element 52"
+alpha = 0.0
+beta = 0.0
+
+["ShaftElement_Shaft Element 9"]
+L = 2.3534702153842416e-5
+idl = 0.0
+odl = 0.01016
+idr = 0.0
+odr = 0.01016
+n = 9
+axial_force = 0
+torque = 0
+shear_effects = true
+rotary_inertia = true
+gyroscopic = true
+shear_method_calc = "cowper"
+tag = "Shaft Element 9"
+alpha = 0.0
+beta = 0.0
+
+["ShaftElement_Shaft Element 10"]
+L = 0.005921628374769235
+idl = 0.0
+odl = 0.01016
+idr = 0.0
+odr = 0.01016
+n = 10
+axial_force = 0
+torque = 0
+shear_effects = true
+rotary_inertia = true
+gyroscopic = true
+shear_method_calc = "cowper"
+tag = "Shaft Element 10"
+alpha = 0.0
+beta = 0.0
+
+["ShaftElement_Shaft Element 11"]
+L = 0.004078371691230766
+idl = 0.0
+odl = 0.01016
+idr = 0.0
+odr = 0.01016
+n = 11
+axial_force = 0
+torque = 0
+shear_effects = true
+rotary_inertia = true
+gyroscopic = true
+shear_method_calc = "cowper"
+tag = "Shaft Element 11"
+alpha = 0.0
+beta = 0.0
+
+["ShaftElement_Shaft Element 12"]
+L = 0.001866791385692311
+idl = 0.0
+odl = 0.01016
+idr = 0.0
+odr = 0.01016
+n = 12
+axial_force = 0
+torque = 0
+shear_effects = true
+rotary_inertia = true
+gyroscopic = true
+shear_method_calc = "cowper"
+tag = "Shaft Element 12"
+alpha = 0.0
+beta = 0.0
+
+["ShaftElement_Shaft Element 13"]
+L = 0.0031484276923076874
+idl = 0.0
+odl = 0.01016
+idr = 0.0
+odr = 0.01016
+n = 13
+axial_force = 0
+torque = 0
+shear_effects = true
+rotary_inertia = true
+gyroscopic = true
+shear_method_calc = "cowper"
+tag = "Shaft Element 13"
+alpha = 0.0
+beta = 0.0
+
+["ShaftElement_Shaft Element 14"]
+L = 0.0027967353846153897
+idl = 0.0
+odl = 0.01016
+idr = 0.0
+odr = 0.01016
+n = 14
+axial_force = 0
+torque = 0
+shear_effects = true
+rotary_inertia = true
+gyroscopic = true
+shear_method_calc = "cowper"
+tag = "Shaft Element 14"
+alpha = 0.0
+beta = 0.0
+
+["ShaftElement_Shaft Element 53"]
+L = 0.010500359999999999
+idl = 0.01016
+odl = 0.0151765
+idr = 0.01016
+odr = 0.0151765
+n = 14
+axial_force = 0
+torque = 0
+shear_effects = true
+rotary_inertia = true
+gyroscopic = true
+shear_method_calc = "cowper"
+tag = "Shaft Element 53"
+alpha = 0.0
+beta = 0.0
+
+["ShaftElement_Shaft Element 15"]
+L = 0.0012961846159646132
+idl = 0.0
+odl = 0.01016
+idr = 0.0
+odr = 0.01016
+n = 15
+axial_force = 0
+torque = 0
+shear_effects = true
+rotary_inertia = true
+gyroscopic = true
+shear_method_calc = "cowper"
+tag = "Shaft Element 15"
+alpha = 0.0
+beta = 0.0
+
+["ShaftElement_Shaft Element 16"]
+L = 0.004648978460958464
+idl = 0.0
+odl = 0.01016
+idr = 0.0
+odr = 0.01016
+n = 16
+axial_force = 0
+torque = 0
+shear_effects = true
+rotary_inertia = true
+gyroscopic = true
+shear_method_calc = "cowper"
+tag = "Shaft Element 16"
+alpha = 0.0
+beta = 0.0
+
+["ShaftElement_Shaft Element 17"]
+L = 0.0017584615384615369
+idl = 0.0
+odl = 0.01016
+idr = 0.0
+odr = 0.01016
+n = 17
+axial_force = 0
+torque = 0
+shear_effects = true
+rotary_inertia = true
+gyroscopic = true
+shear_method_calc = "cowper"
+tag = "Shaft Element 17"
+alpha = 0.0
+beta = 0.0
+
+["ShaftElement_Shaft Element 18"]
+L = 0.00418670153846154
+idl = 0.0
+odl = 0.01016
+idr = 0.0
+odr = 0.01016
+n = 18
+axial_force = 0
+torque = 0
+shear_effects = true
+rotary_inertia = true
+gyroscopic = true
+shear_method_calc = "cowper"
+tag = "Shaft Element 18"
+alpha = 0.0
+beta = 0.0
+
+["ShaftElement_Shaft Element 54"]
+L = 0.0135509
+idl = 0.01016
+odl = 0.013835379999999998
+idr = 0.01016
+odr = 0.013835379999999998
+n = 18
+axial_force = 0
+torque = 0
+shear_effects = true
+rotary_inertia = true
+gyroscopic = true
+shear_method_calc = "cowper"
+tag = "Shaft Element 54"
+alpha = 0.0
+beta = 0.0
+
+["ShaftElement_Shaft Element 19"]
+L = 0.005945163076923077
+idl = 0.0
+odl = 0.01016
+idr = 0.0
+odr = 0.01016
+n = 19
+axial_force = 0
+torque = 0
+shear_effects = true
+rotary_inertia = true
+gyroscopic = true
+shear_method_calc = "cowper"
+tag = "Shaft Element 19"
+alpha = 0.0
+beta = 0.0
+
+["ShaftElement_Shaft Element 20"]
+L = 0.005945163076923077
+idl = 0.0
+odl = 0.01016
+idr = 0.0
+odr = 0.01016
+n = 20
+axial_force = 0
+torque = 0
+shear_effects = true
+rotary_inertia = true
+gyroscopic = true
+shear_method_calc = "cowper"
+tag = "Shaft Element 20"
+alpha = 0.0
+beta = 0.0
+
+["ShaftElement_Shaft Element 21"]
+L = 0.005081832307642304
+idl = 0.0
+odl = 0.01016
+idr = 0.0
+odr = 0.01016
+n = 21
+axial_force = 0
+torque = 0
+shear_effects = true
+rotary_inertia = true
+gyroscopic = true
+shear_method_calc = "cowper"
+tag = "Shaft Element 21"
+alpha = 0.0
+beta = 0.0
+
+["ShaftElement_Shaft Element 22"]
+L = 0.0008633307692807735
+idl = 0.0
+odl = 0.01016
+idr = 0.0
+odr = 0.01016
+n = 22
+axial_force = 0
+torque = 0
+shear_effects = true
+rotary_inertia = true
+gyroscopic = true
+shear_method_calc = "cowper"
+tag = "Shaft Element 22"
+alpha = 0.0
+beta = 0.0
+
+["ShaftElement_Shaft Element 23"]
+L = 0.005945163076923077
+idl = 0.0
+odl = 0.01016
+idr = 0.0
+odr = 0.01016
+n = 23
+axial_force = 0
+torque = 0
+shear_effects = true
+rotary_inertia = true
+gyroscopic = true
+shear_method_calc = "cowper"
+tag = "Shaft Element 23"
+alpha = 0.0
+beta = 0.0
+
+["ShaftElement_Shaft Element 24"]
+L = 0.005945163076923077
+idl = 0.0
+odl = 0.01016
+idr = 0.0
+odr = 0.01016
+n = 24
+axial_force = 0
+torque = 0
+shear_effects = true
+rotary_inertia = true
+gyroscopic = true
+shear_method_calc = "cowper"
+tag = "Shaft Element 24"
+alpha = 0.0
+beta = 0.0
+
+["ShaftElement_Shaft Element 25"]
+L = 0.0009647930769260491
+idl = 0.0
+odl = 0.01016
+idr = 0.0
+odr = 0.01016
+n = 25
+axial_force = 0
+torque = 0
+shear_effects = true
+rotary_inertia = true
+gyroscopic = true
+shear_method_calc = "cowper"
+tag = "Shaft Element 25"
+alpha = 0.0
+beta = 0.0
+
+["ShaftElement_Shaft Element 26"]
+L = 0.004980369999997028
+idl = 0.0
+odl = 0.01016
+idr = 0.0
+odr = 0.01016
+n = 26
+axial_force = 0
+torque = 0
+shear_effects = true
+rotary_inertia = true
+gyroscopic = true
+shear_method_calc = "cowper"
+tag = "Shaft Element 26"
+alpha = 0.0
+beta = 0.0
+
+["ShaftElement_Shaft Element 27"]
+L = 0.002032
+idl = 0.0
+odl = 0.016002
+idr = 0.0
+odr = 0.016002
+n = 27
+axial_force = 0
+torque = 0
+shear_effects = true
+rotary_inertia = true
+gyroscopic = true
+shear_method_calc = "cowper"
+tag = "Shaft Element 27"
+alpha = 0.0
+beta = 0.0
+
+["ShaftElement_Shaft Element 28"]
+L = 0.007264908
+idl = 0.0
+odl = 0.015214599999999998
+idr = 0.0
+odr = 0.0157734
+n = 28
+axial_force = 0
+torque = 0
+shear_effects = true
+rotary_inertia = true
+gyroscopic = true
+shear_method_calc = "cowper"
+tag = "Shaft Element 28"
+alpha = 0.0
+beta = 0.0
+
+["ShaftElement_Shaft Element 29"]
+L = 0.007264908
+idl = 0.0
+odl = 0.0157734
+idr = 0.0
+odr = 0.016332199999999998
+n = 29
+axial_force = 0
+torque = 0
+shear_effects = true
+rotary_inertia = true
+gyroscopic = true
+shear_method_calc = "cowper"
+tag = "Shaft Element 29"
+alpha = 0.0
+beta = 0.0
+
+["ShaftElement_Shaft Element 30"]
+L = 0.007264908
+idl = 0.0
+odl = 0.016332199999999998
+idr = 0.0
+odr = 0.016891
+n = 30
+axial_force = 0
+torque = 0
+shear_effects = true
+rotary_inertia = true
+gyroscopic = true
+shear_method_calc = "cowper"
+tag = "Shaft Element 30"
+alpha = 0.0
+beta = 0.0
+
+["ShaftElement_Shaft Element 31"]
+L = 0.007264908
+idl = 0.0
+odl = 0.016890999999999996
+idr = 0.0
+odr = 0.017449799999999998
+n = 31
+axial_force = 0
+torque = 0
+shear_effects = true
+rotary_inertia = true
+gyroscopic = true
+shear_method_calc = "cowper"
+tag = "Shaft Element 31"
+alpha = 0.0
+beta = 0.0
+
+["ShaftElement_Shaft Element 32"]
+L = 0.007264908
+idl = 0.0
+odl = 0.017449799999999998
+idr = 0.0
+odr = 0.0180086
+n = 32
+axial_force = 0
+torque = 0
+shear_effects = true
+rotary_inertia = true
+gyroscopic = true
+shear_method_calc = "cowper"
+tag = "Shaft Element 32"
+alpha = 0.0
+beta = 0.0
+
+["ShaftElement_Shaft Element 33"]
+L = 0.005251459905999969
+idl = 0.0
+odl = 0.011999976
+idr = 0.0
+odr = 0.011999976
+n = 33
+axial_force = 0
+torque = 0
+shear_effects = true
+rotary_inertia = true
+gyroscopic = true
+shear_method_calc = "cowper"
+tag = "Shaft Element 33"
+alpha = 0.0
+beta = 0.0
+
+["ShaftElement_Shaft Element 34"]
+L = 0.0017208400940000312
+idl = 0.0
+odl = 0.011999976
+idr = 0.0
+odr = 0.011999976
+n = 34
+axial_force = 0
+torque = 0
+shear_effects = true
+rotary_inertia = true
+gyroscopic = true
+shear_method_calc = "cowper"
+tag = "Shaft Element 34"
+alpha = 0.0
+beta = 0.0
+
+["ShaftElement_Shaft Element 35"]
+L = 0.0069723
+idl = 0.0
+odl = 0.011999976
+idr = 0.0
+odr = 0.011999976
+n = 35
+axial_force = 0
+torque = 0
+shear_effects = true
+rotary_inertia = true
+gyroscopic = true
+shear_method_calc = "cowper"
+tag = "Shaft Element 35"
+alpha = 0.0
+beta = 0.0
+
+["ShaftElement_Shaft Element 36"]
+L = 0.0013068599720000148
+idl = 0.0
+odl = 0.011999976
+idr = 0.0
+odr = 0.011999976
+n = 36
+axial_force = 0
+torque = 0
+shear_effects = true
+rotary_inertia = true
+gyroscopic = true
+shear_method_calc = "cowper"
+tag = "Shaft Element 36"
+alpha = 0.0
+beta = 0.0
+
+["ShaftElement_Shaft Element 37"]
+L = 0.005665440027999985
+idl = 0.0
+odl = 0.011999976
+idr = 0.0
+odr = 0.011999976
+n = 37
+axial_force = 0
+torque = 0
+shear_effects = true
+rotary_inertia = true
+gyroscopic = true
+shear_method_calc = "cowper"
+tag = "Shaft Element 37"
+alpha = 0.0
+beta = 0.0
+
+["ShaftElement_Shaft Element 38"]
+L = 0.002499460000003214
+idl = 0.0
+odl = 0.011999976
+idr = 0.0
+odr = 0.011999976
+n = 38
+axial_force = 0
+torque = 0
+shear_effects = true
+rotary_inertia = true
+gyroscopic = true
+shear_method_calc = "cowper"
+tag = "Shaft Element 38"
+alpha = 0.0
+beta = 0.0
+
+["ShaftElement_Shaft Element 39"]
+L = 0.004472839999996786
+idl = 0.0
+odl = 0.011999976
+idr = 0.0
+odr = 0.011999976
+n = 39
+axial_force = 0
+torque = 0
+shear_effects = true
+rotary_inertia = true
+gyroscopic = true
+shear_method_calc = "cowper"
+tag = "Shaft Element 39"
+alpha = 0.0
+beta = 0.0
+
+["ShaftElement_Shaft Element 40"]
+L = 0.005690446666666666
+idl = 0.0
+odl = 0.009524999999999999
+idr = 0.0
+odr = 0.009524999999999999
+n = 40
+axial_force = 0
+torque = 0
+shear_effects = true
+rotary_inertia = true
+gyroscopic = true
+shear_method_calc = "cowper"
+tag = "Shaft Element 40"
+alpha = 0.0
+beta = 0.0
+
+["ShaftElement_Shaft Element 41"]
+L = 4.5613333326572844e-5
+idl = 0.0
+odl = 0.009524999999999999
+idr = 0.0
+odr = 0.009524999999999999
+n = 41
+axial_force = 0
+torque = 0
+shear_effects = true
+rotary_inertia = true
+gyroscopic = true
+shear_method_calc = "cowper"
+tag = "Shaft Element 41"
+alpha = 0.0
+beta = 0.0
+
+["ShaftElement_Shaft Element 42"]
+L = 0.0056448333333400935
+idl = 0.0
+odl = 0.009524999999999999
+idr = 0.0
+odr = 0.009524999999999999
+n = 42
+axial_force = 0
+torque = 0
+shear_effects = true
+rotary_inertia = true
+gyroscopic = true
+shear_method_calc = "cowper"
+tag = "Shaft Element 42"
+alpha = 0.0
+beta = 0.0
+
+["ShaftElement_Shaft Element 43"]
+L = 0.005690446666666666
+idl = 0.0
+odl = 0.009524999999999999
+idr = 0.0
+odr = 0.009524999999999999
+n = 43
+axial_force = 0
+torque = 0
+shear_effects = true
+rotary_inertia = true
+gyroscopic = true
+shear_method_calc = "cowper"
+tag = "Shaft Element 43"
+alpha = 0.0
+beta = 0.0
+
+["ShaftElement_Shaft Element 44"]
+L = 0.003281590000002237
+idl = 0.0
+odl = 0.00635
+idr = 0.0
+odr = 0.00635
+n = 44
+axial_force = 0
+torque = 0
+shear_effects = true
+rotary_inertia = true
+gyroscopic = true
+shear_method_calc = "cowper"
+tag = "Shaft Element 44"
+alpha = 0.0
+beta = 0.0
+
+["ShaftElement_Shaft Element 45"]
+L = 0.0027877399999977626
+idl = 0.0
+odl = 0.00635
+idr = 0.0
+odr = 0.00635
+n = 45
+axial_force = 0
+torque = 0
+shear_effects = true
+rotary_inertia = true
+gyroscopic = true
+shear_method_calc = "cowper"
+tag = "Shaft Element 45"
+alpha = 0.0
+beta = 0.0
+
+["ShaftElement_Shaft Element 46"]
+L = 0.0060693299999999995
+idl = 0.0
+odl = 0.00635
+idr = 0.0
+odr = 0.00635
+n = 46
+axial_force = 0
+torque = 0
+shear_effects = true
+rotary_inertia = true
+gyroscopic = true
+shear_method_calc = "cowper"
+tag = "Shaft Element 46"
+alpha = 0.0
+beta = 0.0
+
+["ShaftElement_Shaft Element 47"]
+L = 0.004506459999990614
+idl = 0.0
+odl = 0.00559435
+idr = 0.0
+odr = 0.00559435
+n = 47
+axial_force = 0
+torque = 0
+shear_effects = true
+rotary_inertia = true
+gyroscopic = true
+shear_method_calc = "cowper"
+tag = "Shaft Element 47"
+alpha = 0.0
+beta = 0.0
+
+["ShaftElement_Shaft Element 48"]
+L = 0.001843540000009386
+idl = 0.0
+odl = 0.00559435
+idr = 0.0
+odr = 0.00559435
+n = 48
+axial_force = 0
+torque = 0
+shear_effects = true
+rotary_inertia = true
+gyroscopic = true
+shear_method_calc = "cowper"
+tag = "Shaft Element 48"
+alpha = 0.0
+beta = 0.0
+
+["DiskElement_Sleeve Nut"]
+n = 1
+m = 0.01362
+Id = 5.402e-7
+Ip = 5.396e-7
+tag = "Sleeve Nut"
+scale_factor = 0.25
+color = "Firebrick"
+
+[DiskElement_Turbine]
+n = 2
+m = 0.2915
+Id = 0.0001848
+Ip = 0.000368
+tag = "Turbine"
+scale_factor = 2.2
+color = "Firebrick"
+
+["DiskElement_Kero Bearing Nut"]
+n = 16
+m = 0.024601
+Id = 1.65e-6
+Ip = 2.96e-6
+tag = "Kero Bearing Nut"
+scale_factor = 0.5
+color = "Firebrick"
+
+["DiskElement_Kero Inducer"]
+n = 22
+m = 0.0076
+Id = 4.2699999999999995e-7
+Ip = 6.24e-7
+tag = "Kero Inducer"
+scale_factor = 0.75
+color = "Firebrick"
+
+["DiskElement_Kero Impeller"]
+n = 26
+m = 0.0363
+Id = 6.44e-6
+Ip = 1.15e-5
+tag = "Kero Impeller"
+scale_factor = 1.25
+color = "Green"
+
+["DiskElement_LOX Bearing Nut"]
+n = 39
+m = 0.010346
+Id = 5.6097e-7
+Ip = 3.4483e-7
+tag = "LOX Bearing Nut"
+scale_factor = 0.5
+color = "Firebrick"
+
+["DiskElement_LOX Impeller"]
+n = 42
+m = 0.084
+Id = 1.13e-5
+Ip = 1.88e-5
+tag = "LOX Impeller"
+scale_factor = 1.25
+color = "Cyan"
+
+["DiskElement_LOX Inducer"]
+n = 45
+m = 0.019
+Id = 8.75e-7
+Ip = 1.23e-6
+tag = "LOX Inducer"
+scale_factor = 0.75
+color = "Firebrick"
+
+["DiskElement_Retaining Nut"]
+n = 48
+m = 0.004491
+Id = 6.8793e-8
+Ip = 7.134e-8
+tag = "Retaining Nut"
+scale_factor = 0.25
+color = "Firebrick"
+
+[BallBearingElement_KeroBearing1]
+alpha = 0.2617993877991494
+color = "#355d7a"
+cxx = [ 529.8800731521492,]
+cxy = [ 0.0,]
+cyx = [ 0.0,]
+cyy = [ 827.9376143002331,]
+czz = [ 0,]
+d_balls = 0.005556
+fs = 196.6025403784439
+kxx = [ 42390405.852171935,]
+kxy = [ 0.0,]
+kyx = [ 0.0,]
+kyy = [ 66235009.14401865,]
+kzz = [ 0,]
+mxx = [ 0,]
+mxy = [ 0,]
+myx = [ 0,]
+myy = [ 0,]
+mzz = [ 0,]
+n = 10
+n_balls = 12
+scale_factor = 1
+tag = "KeroBearing1"
+
+[BallBearingElement_LOXBearing1]
+alpha = 0.2617993877991494
+color = "#355d7a"
+cxx = [ 411.4968075651593,]
+cxy = [ 0.0,]
+cyx = [ 0.0,]
+cyy = [ 733.1791671539586,]
+czz = [ 0,]
+d_balls = 0.005556
+fs = 196.6025403784439
+kxx = [ 32919744.605212744,]
+kxy = [ 0.0,]
+kyx = [ 0.0,]
+kyy = [ 58654333.37231669,]
+kzz = [ 0,]
+mxx = [ 0,]
+mxy = [ 0,]
+myx = [ 0,]
+myy = [ 0,]
+mzz = [ 0,]
+n = 34
+n_balls = 10
+scale_factor = 1
+tag = "LOXBearing1"
+
+[BallBearingElement_LOXBearing2]
+alpha = 0.2617993877991494
+color = "#355d7a"
+cxx = [ 411.4968075651593,]
+cxy = [ 0.0,]
+cyx = [ 0.0,]
+cyy = [ 733.1791671539586,]
+czz = [ 0,]
+d_balls = 0.005556
+fs = 196.6025403784439
+kxx = [ 32919744.605212744,]
+kxy = [ 0.0,]
+kyx = [ 0.0,]
+kyy = [ 58654333.37231669,]
+kzz = [ 0,]
+mxx = [ 0,]
+mxy = [ 0,]
+myx = [ 0,]
+myy = [ 0,]
+mzz = [ 0,]
+n = 37
+n_balls = 10
+scale_factor = 1
+tag = "LOXBearing2"
+
+["ShaftElement_Shaft Element 0".material]
+name = "Stainless-A286"
+rho = 7944.1327
+E = 198569010043.24887
+G_s = 75789698489.78964
+color = "#525252"
+
+["ShaftElement_Shaft Element 1".material]
+name = "Stainless-A286"
+rho = 7944.1327
+E = 198569010043.24887
+G_s = 75789698489.78964
+color = "#525252"
+
+["ShaftElement_Shaft Element 2".material]
+name = "Stainless-A286"
+rho = 7944.1327
+E = 198569010043.24887
+G_s = 75789698489.78964
+color = "#525252"
+
+["ShaftElement_Shaft Element 3".material]
+name = "Stainless-A286"
+rho = 7944.1327
+E = 198569010043.24887
+G_s = 75789698489.78964
+color = "#525252"
+
+["ShaftElement_Shaft Element 49".material]
+name = "Stainless-A286"
+rho = 7944.1327
+E = 198569010043.24887
+G_s = 75789698489.78964
+color = "#525252"
+
+["ShaftElement_Shaft Element 4".material]
+name = "Stainless-A286"
+rho = 7944.1327
+E = 198569010043.24887
+G_s = 75789698489.78964
+color = "#525252"
+
+["ShaftElement_Shaft Element 5".material]
+name = "Stainless-A286"
+rho = 7944.1327
+E = 198569010043.24887
+G_s = 75789698489.78964
+color = "#525252"
+
+["ShaftElement_Shaft Element 50".material]
+name = "Stainless-A286"
+rho = 7944.1327
+E = 198569010043.24887
+G_s = 75789698489.78964
+color = "#525252"
+
+["ShaftElement_Shaft Element 6".material]
+name = "Stainless-A286"
+rho = 7944.1327
+E = 198569010043.24887
+G_s = 75789698489.78964
+color = "#525252"
+
+["ShaftElement_Shaft Element 51".material]
+name = "Stainless-A286"
+rho = 7944.1327
+E = 198569010043.24887
+G_s = 75789698489.78964
+color = "#525252"
+
+["ShaftElement_Shaft Element 7".material]
+name = "Stainless-A286"
+rho = 7944.1327
+E = 198569010043.24887
+G_s = 75789698489.78964
+color = "#525252"
+
+["ShaftElement_Shaft Element 8".material]
+name = "Stainless-A286"
+rho = 7944.1327
+E = 198569010043.24887
+G_s = 75789698489.78964
+color = "#525252"
+
+["ShaftElement_Shaft Element 52".material]
+name = "Stainless-A286"
+rho = 7944.1327
+E = 198569010043.24887
+G_s = 75789698489.78964
+color = "#525252"
+
+["ShaftElement_Shaft Element 9".material]
+name = "Stainless-A286"
+rho = 7944.1327
+E = 198569010043.24887
+G_s = 75789698489.78964
+color = "#525252"
+
+["ShaftElement_Shaft Element 10".material]
+name = "Stainless-A286"
+rho = 7944.1327
+E = 198569010043.24887
+G_s = 75789698489.78964
+color = "#525252"
+
+["ShaftElement_Shaft Element 11".material]
+name = "Stainless-A286"
+rho = 7944.1327
+E = 198569010043.24887
+G_s = 75789698489.78964
+color = "#525252"
+
+["ShaftElement_Shaft Element 12".material]
+name = "Stainless-A286"
+rho = 7944.1327
+E = 198569010043.24887
+G_s = 75789698489.78964
+color = "#525252"
+
+["ShaftElement_Shaft Element 13".material]
+name = "Stainless-A286"
+rho = 7944.1327
+E = 198569010043.24887
+G_s = 75789698489.78964
+color = "#525252"
+
+["ShaftElement_Shaft Element 14".material]
+name = "Stainless-A286"
+rho = 7944.1327
+E = 198569010043.24887
+G_s = 75789698489.78964
+color = "#525252"
+
+["ShaftElement_Shaft Element 53".material]
+name = "Stainless-A286"
+rho = 7944.1327
+E = 198569010043.24887
+G_s = 75789698489.78964
+color = "#525252"
+
+["ShaftElement_Shaft Element 15".material]
+name = "Stainless-A286"
+rho = 7944.1327
+E = 198569010043.24887
+G_s = 75789698489.78964
+color = "#525252"
+
+["ShaftElement_Shaft Element 16".material]
+name = "Stainless-A286"
+rho = 7944.1327
+E = 198569010043.24887
+G_s = 75789698489.78964
+color = "#525252"
+
+["ShaftElement_Shaft Element 17".material]
+name = "Stainless-A286"
+rho = 7944.1327
+E = 198569010043.24887
+G_s = 75789698489.78964
+color = "#525252"
+
+["ShaftElement_Shaft Element 18".material]
+name = "Stainless-A286"
+rho = 7944.1327
+E = 198569010043.24887
+G_s = 75789698489.78964
+color = "#525252"
+
+["ShaftElement_Shaft Element 54".material]
+name = "Stainless-A286"
+rho = 7944.1327
+E = 198569010043.24887
+G_s = 75789698489.78964
+color = "#525252"
+
+["ShaftElement_Shaft Element 19".material]
+name = "Stainless-A286"
+rho = 7944.1327
+E = 198569010043.24887
+G_s = 75789698489.78964
+color = "#525252"
+
+["ShaftElement_Shaft Element 20".material]
+name = "Stainless-A286"
+rho = 7944.1327
+E = 198569010043.24887
+G_s = 75789698489.78964
+color = "#525252"
+
+["ShaftElement_Shaft Element 21".material]
+name = "Stainless-A286"
+rho = 7944.1327
+E = 198569010043.24887
+G_s = 75789698489.78964
+color = "#525252"
+
+["ShaftElement_Shaft Element 22".material]
+name = "Stainless-A286"
+rho = 7944.1327
+E = 198569010043.24887
+G_s = 75789698489.78964
+color = "#525252"
+
+["ShaftElement_Shaft Element 23".material]
+name = "Stainless-A286"
+rho = 7944.1327
+E = 198569010043.24887
+G_s = 75789698489.78964
+color = "#525252"
+
+["ShaftElement_Shaft Element 24".material]
+name = "Stainless-A286"
+rho = 7944.1327
+E = 198569010043.24887
+G_s = 75789698489.78964
+color = "#525252"
+
+["ShaftElement_Shaft Element 25".material]
+name = "Stainless-A286"
+rho = 7944.1327
+E = 198569010043.24887
+G_s = 75789698489.78964
+color = "#525252"
+
+["ShaftElement_Shaft Element 26".material]
+name = "Stainless-A286"
+rho = 7944.1327
+E = 198569010043.24887
+G_s = 75789698489.78964
+color = "#525252"
+
+["ShaftElement_Shaft Element 27".material]
+name = "Stainless-A286"
+rho = 7944.1327
+E = 198569010043.24887
+G_s = 75789698489.78964
+color = "#525252"
+
+["ShaftElement_Shaft Element 28".material]
+name = "Stainless-A286"
+rho = 7944.1327
+E = 198569010043.24887
+G_s = 75789698489.78964
+color = "#525252"
+
+["ShaftElement_Shaft Element 29".material]
+name = "Stainless-A286"
+rho = 7944.1327
+E = 198569010043.24887
+G_s = 75789698489.78964
+color = "#525252"
+
+["ShaftElement_Shaft Element 30".material]
+name = "Stainless-A286"
+rho = 7944.1327
+E = 198569010043.24887
+G_s = 75789698489.78964
+color = "#525252"
+
+["ShaftElement_Shaft Element 31".material]
+name = "Stainless-A286"
+rho = 7944.1327
+E = 198569010043.24887
+G_s = 75789698489.78964
+color = "#525252"
+
+["ShaftElement_Shaft Element 32".material]
+name = "Stainless-A286"
+rho = 7944.1327
+E = 198569010043.24887
+G_s = 75789698489.78964
+color = "#525252"
+
+["ShaftElement_Shaft Element 33".material]
+name = "Stainless-A286"
+rho = 7944.1327
+E = 198569010043.24887
+G_s = 75789698489.78964
+color = "#525252"
+
+["ShaftElement_Shaft Element 34".material]
+name = "Stainless-A286"
+rho = 7944.1327
+E = 198569010043.24887
+G_s = 75789698489.78964
+color = "#525252"
+
+["ShaftElement_Shaft Element 35".material]
+name = "Stainless-A286"
+rho = 7944.1327
+E = 198569010043.24887
+G_s = 75789698489.78964
+color = "#525252"
+
+["ShaftElement_Shaft Element 36".material]
+name = "Stainless-A286"
+rho = 7944.1327
+E = 198569010043.24887
+G_s = 75789698489.78964
+color = "#525252"
+
+["ShaftElement_Shaft Element 37".material]
+name = "Stainless-A286"
+rho = 7944.1327
+E = 198569010043.24887
+G_s = 75789698489.78964
+color = "#525252"
+
+["ShaftElement_Shaft Element 38".material]
+name = "Stainless-A286"
+rho = 7944.1327
+E = 198569010043.24887
+G_s = 75789698489.78964
+color = "#525252"
+
+["ShaftElement_Shaft Element 39".material]
+name = "Stainless-A286"
+rho = 7944.1327
+E = 198569010043.24887
+G_s = 75789698489.78964
+color = "#525252"
+
+["ShaftElement_Shaft Element 40".material]
+name = "Stainless-A286"
+rho = 7944.1327
+E = 198569010043.24887
+G_s = 75789698489.78964
+color = "#525252"
+
+["ShaftElement_Shaft Element 41".material]
+name = "Stainless-A286"
+rho = 7944.1327
+E = 198569010043.24887
+G_s = 75789698489.78964
+color = "#525252"
+
+["ShaftElement_Shaft Element 42".material]
+name = "Stainless-A286"
+rho = 7944.1327
+E = 198569010043.24887
+G_s = 75789698489.78964
+color = "#525252"
+
+["ShaftElement_Shaft Element 43".material]
+name = "Stainless-A286"
+rho = 7944.1327
+E = 198569010043.24887
+G_s = 75789698489.78964
+color = "#525252"
+
+["ShaftElement_Shaft Element 44".material]
+name = "Stainless-A286"
+rho = 7944.1327
+E = 198569010043.24887
+G_s = 75789698489.78964
+color = "#525252"
+
+["ShaftElement_Shaft Element 45".material]
+name = "Stainless-A286"
+rho = 7944.1327
+E = 198569010043.24887
+G_s = 75789698489.78964
+color = "#525252"
+
+["ShaftElement_Shaft Element 46".material]
+name = "Stainless-A286"
+rho = 7944.1327
+E = 198569010043.24887
+G_s = 75789698489.78964
+color = "#525252"
+
+["ShaftElement_Shaft Element 47".material]
+name = "Stainless-A286"
+rho = 7944.1327
+E = 198569010043.24887
+G_s = 75789698489.78964
+color = "#525252"
+
+["ShaftElement_Shaft Element 48".material]
+name = "Stainless-A286"
+rho = 7944.1327
+E = 198569010043.24887
+G_s = 75789698489.78964
+color = "#525252"
