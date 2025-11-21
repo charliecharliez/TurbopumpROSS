@@ -60,7 +60,7 @@ def PromptInt(message: str, accept_none: bool=False) -> int | None:
 
 pio.renderers.default = "browser"# "vscode"
 
-def LoadRotor() -> rs.Rotor:
+def LoadRotor() -> tuple[rs.Rotor, str]:
     name: str = input("Load model (Default: \'Default\')?:\n")
     if name == '': name = 'Default'
     directory = os.getcwd() + '\\Results\\' + name;
@@ -68,9 +68,9 @@ def LoadRotor() -> rs.Rotor:
     if not os.path.isdir(directory):
         raise ValueError('In valid directory name');
 
-    return rs.Rotor.load(directory + "\\MODEL.json");
+    return rs.Rotor.load(directory + "\\MODEL.json"), directory;
 
-rotor = LoadRotor();
+rotor, directory = LoadRotor();
 
 for bearing in rotor.bearing_elements:
     print(bearing.tag + " stiffness: ", bearing.K(0))
@@ -135,23 +135,13 @@ mass_sum += shaft_mass_sum
 print(f"Rotor mass: %.3f kg" % mass_sum);
 
 #%% Save figs
-if PromptBool("Save result figures?"):
-    folder_name: str = input("Results folder name:?\n");
+if PromptBool("Save result figures? (Directory: " + directory + ")"):
     
-    if folder_name == "":
-        folder_name = 'Default'
-    DIR = os.getcwd();
-    results_dir = os.path.join(DIR, 'Results');
-    folder_path = os.path.join(results_dir, folder_name);
-
-    if not os.path.isdir(folder_path):
-        os.makedirs(folder_path);
-    #print(figures)
     for name, v in figures.items():
         fig = v['fig'];
         file_extension = v['extension'];
 
         if file_extension == 'html':
-            fig.write_html(folder_path + "/" + name + '.html');
+            fig.write_html(directory + "\\" + name + '.html');
         else:
-            fig.write_image(folder_path + '/' + name + '.' + file_extension);
+            fig.write_image(directory + '\\' + name + '.' + file_extension);

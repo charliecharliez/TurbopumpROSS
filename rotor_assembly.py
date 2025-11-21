@@ -25,13 +25,10 @@ def safe_int(x: float, tol: float = 1e-9) -> int:
 # https://www.specialmetals.com/documents/technical-bulletins/inconel/inconel-alloy-718.pdf
 
 inco_718 = rs.Material(name="Inconel-718", rho=8193, E = 1.77885e11, Poisson=0.271)
-#print("="*36) # takes a while
 
 # https://asm.matweb.com/search/specificmaterial.asp?bassnum=mq304a
 ss_304 = rs.Material(name="Stainless-304", rho = 8000, E = 1.93e11, Poisson=0.29);
 
-#print(rs.Material.available_materials())
-#print("="*36) # takes a while
 ss_A286 = rs.Material(name="Stainless-A286", rho=7944.1327, E=Q_(28.8E6, 'psi'), Poisson=0.31)
 
 #%%____________________PRELIMINARY SHAFT______________________
@@ -74,14 +71,36 @@ def ThreadSection(L: float, major_d: float, minor_d: float, tpi: int | float, nu
         ShaftSection(L=extra, odl=major_d);
 
 overlaps = [];
-def OverlappingSection(L: float, start: float, odl: float, idl: float, odr: float|None=None, idr: float|None=None):
+def OverlappingSection(L: float, start: float, odl: float, idl: float, odr: float|None=None, idr: float|None=None) -> None:
+    odr: float = not odr is None and odr or odl
+    idr: float = not idr is None and idr or idl
+
+    slender_ratio: float = L / (odr + odl) * 2;
+    MAX_RATIO: float = 0.75;
+    if slender_ratio > MAX_RATIO:
+        partitions: int = int(slender_ratio / MAX_RATIO) + 1;
+        print("PARTITIONS: ",partitions)
+        L_i: float = L / partitions;
+        slope_out: float = (odr - odl) / L;
+        slope_in: float = (idr - idl) / L;
+        for i in range(partitions):
+            OverlappingSection(
+                L=L_i,
+                start=start + L_i*i,
+                odl=odl + slope_out*i* L_i,
+                odr=odl + slope_out*(i + 1)*L_i,
+                idl=idl + slope_in*i*L_i,
+                idr=idl + slope_in*(i + 1)*L_i
+                )
+        return
+    
     overlaps.append({
         'Start': start,
         'L': L,
         'odl': odl,
-        'odr': odr or odl,
+        'odr': odr,
         'idl': idl,
-        'idr': idr or idl
+        'idr': idr
     })
 
 # UNC 3/8-16 threads
@@ -397,10 +416,7 @@ for node_i, node_pos in enumerate(overlap_insert_shaft.nodes_pos):
         continue
     
     overlap_index += 1;
-    if overlap_index==6:
-        print(overlap)
-        print("\n", node_i)
-    #print("\n", node_i)
+
     overlap_shaft_elem = rs.ShaftElement(
         L=Q_(overlap['L'], 'in'),
         idl=Q_(overlap['idl'], 'in'),
@@ -422,12 +438,12 @@ rotor_model = rs.Rotor(
 
 name: str = input("Enter model name? (Default: \'Default\')\n")
 
-DIR = os.getcwd();
-
 if name == '':
     name = 'Default'
-#print(os.path.join(os.path.join(results_dir, name)))
-rotor_model.save(DIR + '\\Results\\'+ name +'\\MODEL.json');
+directory: str = os.getcwd() + '\\Results\\'+ name;
+if not os.path.isdir(directory):
+    os.makedirs(directory);
+rotor_model.save(directory + '\\MODEL.json');
 
 print("Rotor model created");
 
