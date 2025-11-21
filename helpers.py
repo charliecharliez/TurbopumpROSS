@@ -1,4 +1,5 @@
 import ross as rs
+import numpy as np
 
 def PlotRotor(rotor: rs.Rotor):
     fig = rotor.plot_rotor(length_units='in', check_sld=True)
@@ -45,3 +46,6 @@ def PromptInt(message: str, accept_none: bool=False) -> int | None:
             continue
     print('...\n')
     return value;
+
+def ToAngularFreq(rpm: float) -> float:
+    return rpm/60 * 2 * np.pi;

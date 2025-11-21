@@ -16,6 +16,12 @@ import plotly.io as pio
 
 from helpers import PromptBool
 from helpers import PromptInt
+from helpers import ToAngularFreq
+
+RPM_GRAPH_MAX = float(90E3);
+RPM_OP = float(50E3)
+
+SPEED_RANGE = np.linspace(0, ToAngularFreq(RPM_GRAPH_MAX), 70)
 
 figures: dict[str: dict] = {};
 def SaveFigure(fig, name: str, file_extension: str | None = 'html', append_num: int | None=None) -> None:
@@ -54,11 +60,10 @@ if PromptBool("Plot rotor model?"):
     rotor_fig = helpers.PlotRotor(rotor)
     SaveFigure(rotor_fig, "RotorModel");
 
-RPM_GRAPH_MAX = float(70E3);
-RPM_OP = float(50E3)
-
-def ToAngularFreq(rpm: float) -> float:
-    return rpm/60 * 2 * np.pi;
+if PromptBool("Run Critical Speeds?"):
+    crit = rotor.run_critical_speed(num_modes=10);
+    print("Damped: ", np.round(crit.wd(frequency_units='rpm')))
+    print("Undamped: ", np.round(crit.wn(frequency_units='rpm')))
 
 if PromptBool("Run modal?"):
     mode_shapes = PromptInt("How many mode shapes? (Default: 5)", accept_none=True) or 5;
@@ -81,14 +86,12 @@ if PromptBool("Run modal?"):
     for fig in shape_figs:
         fig.show()
 
-speed_range = np.linspace(0, ToAngularFreq(RPM_GRAPH_MAX), 70)
-
 if PromptBool("Run and plot Campbell?"):
 
     frequencies = PromptInt("Frequencies to run? (Default: 5)", accept_none=True) or 5;
 
     campbell = rotor.run_campbell(
-        speed_range=speed_range,
+        speed_range=SPEED_RANGE,
         frequencies=frequencies,
         frequency_type="wd"
     )
@@ -120,3 +123,5 @@ if PromptBool("Save result figures? (Directory: " + directory + ")"):
             fig.write_html(directory + "\\" + name + '.html');
         else:
             fig.write_image(directory + '\\' + name + '.' + file_extension);
+
+print("\nProgram exited.\n" + "____"*20 + "\n")
